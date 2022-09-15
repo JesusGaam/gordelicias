@@ -1,0 +1,80 @@
+@import "../../../styles/abstracts/all.scss";
+
+.navbar-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: #303030;
+  z-index: 1000;
+
+  padding: 10px 20px;
+
+  .vertical-center{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  > div {
+    height: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 100px auto 0;
+
+    @include media-md-less {
+      grid-template-columns: auto 80px auto 40px;
+    }
+
+    .logo-container {
+      text-align: center;
+      @include media-md-less {
+        text-align: right;
+      }
+
+      svg {
+        height: 48px;
+        width: 48px;
+        fill: #fff;
+      }
+    }
+
+    .link-container {
+      text-align: center;
+
+      > div {
+        height: 24px;
+        &:nth-child(1) {
+          @include media-md-less {
+            display: none;
+          }
+        }
+      }
+
+      a {
+        color: #fff;
+        font-size: 18px;
+
+        + a {
+          margin-left: 30px;
+        }
+      }
+    }
+    .menu-container{
+      svg{
+        fill: #fff;
+      }
+    }
+  }
+}
