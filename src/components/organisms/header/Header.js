@@ -6,6 +6,9 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
 import "./Header.scss";
 
+import orangeImg from "img/gordita.png";
+import gorditaImg from "img/carrusel-header-orange.jpg";
+
 const Header = () => {
   return (
     <AutoplaySlider
@@ -17,7 +20,8 @@ const Header = () => {
     >
       <div className="carousel-item">
         <a href="#item1">
-          <img src="https://picsum.photos/800/600?random=1" />
+          <img className="background" src={gorditaImg} />
+          <img className="principal" src={orangeImg} />
         </a>
       </div>
       <div className="carousel-item">

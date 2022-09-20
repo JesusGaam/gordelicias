@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "@/components/organisms/navbar/Navbar";
 import Header from "@/components/organisms/header/Header";
+import "./Home.css";
 
 const Home = () => {
   return (

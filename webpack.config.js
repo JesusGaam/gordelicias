@@ -17,7 +17,7 @@ const getEnvKeys = (env) => {
 
   envKeys["process.env.MODE"] = JSON.stringify(getEnvType(env));
   envKeys["process.env.NODE_ENV"] = JSON.stringify(mode);
-  
+
   console.log("VARIABLES DE ENTORNO", envKeys);
 
   return envKeys;
@@ -67,11 +67,28 @@ module.exports = (env) => ({
       },
       {
         test: /\.(sass|scss|css)$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              esModule: false,
+            },
+          },
+          "sass-loader",
+        ],
       },
       {
         test: /\.svg$/,
         use: ["@svgr/webpack"],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
       },
     ],
   },
