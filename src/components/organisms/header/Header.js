@@ -8,6 +8,7 @@ import "./Header.scss";
 
 import orangeImg from "img/gordita.png";
 import gorditaImg from "img/carrusel-header-orange.jpg";
+import gordita2Img from "img/carrusel-gordita.png";
 
 const Header = () => {
   return (
@@ -26,12 +27,8 @@ const Header = () => {
       </div>
       <div className="carousel-item">
         <a href="#item2">
-          <img src="https://picsum.photos/800/600?random=2" />
-        </a>
-      </div>
-      <div className="carousel-item">
-        <a href="#item3">
-          <img src="https://picsum.photos/800/600?random=3" />
+          <img className="background" src={gorditaImg} />
+          <img className="principal" src={gordita2Img} />
         </a>
       </div>
     </AutoplaySlider>

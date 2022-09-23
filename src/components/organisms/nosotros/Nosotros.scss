@@ -1,0 +1,52 @@
+@import "../../../styles/abstracts/all.scss";
+.about-us {
+  .grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    @include media-md-less {
+      grid-template-columns: auto;
+    }
+
+    > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+    }
+
+    > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .about-us-title {
+    width: 60%;
+    margin-bottom: 40px;
+
+    @include media-md-less {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-weight: 300;
+
+    @include media-md-greater {
+      font-size: 24px;
+    }
+
+    @include media-md {
+      font-size: 22px;
+    }
+  }
+
+  .nela-pics {
+    width: 80%;
+    @include media-md-less {
+      margin-top: 40px;
+    }
+  }
+}

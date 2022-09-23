@@ -8,6 +8,10 @@ footer {
     > div {
       margin: 0 auto;
       box-sizing: border-box;
+
+      @include media-xl-greater{
+        max-width: $breakPointXL;
+    }
     }
   }
 }

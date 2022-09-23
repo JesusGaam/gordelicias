@@ -1,0 +1,137 @@
+@import "../../../styles/abstracts/all.scss";
+
+.products {
+  padding-bottom: 0px !important;
+
+  .products-title {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+
+    @include media-md-less {
+      width: 70%;
+    }
+  }
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+
+  + .product {
+    margin-top: 30px;
+  }
+
+  @include media-md-less {
+    padding-bottom: 260px !important;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    @include media-md-greater {
+      min-height: 350px;
+    }
+  }
+
+  .product-subtitle {
+    display: block;
+    width: 250px;
+    margin-bottom: 40px;
+
+    @include media-md-less {
+      width: 250px;
+    }
+    @include media-sm {
+      width: 40%;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-weight: 300;
+    max-width: 440px;
+
+    @include media-md-greater {
+      font-size: 24px;
+    }
+
+    @include media-md {
+      font-size: 22px;
+    }
+  }
+
+  .images {
+    z-index: -1;
+
+    img {
+      position: absolute;
+      right: 0;
+
+      &.circle {
+        height: 300px;
+        top: calc(50% - 150px);
+
+        @include media-lg-greater {
+          height: 450px;
+          top: calc(50% - 225px);
+        }
+
+        @include media-md-less {
+          height: 260px;
+        }
+
+        @include media-sm {
+          height: 240px;
+        }
+      }
+
+      &.hand {
+        height: 250px;
+        top: calc(50% - 125px);
+
+        @include media-lg-greater {
+          height: 300px;
+          top: calc(50% - 150px);
+        }
+
+        @include media-md-less {
+          height: 210px;
+          margin-bottom: 30px;
+        }
+
+        @include media-sm {
+          height: 160px;
+          margin-bottom: 30px;
+        }
+      }
+
+      @include media-md-less {
+        top: initial !important;
+        bottom: 0;
+      }
+    }
+  }
+
+  &.right {
+    > div {
+      justify-content: right;
+    }
+
+    .product-subtitle {
+      margin-left: auto;
+    }
+
+    p {
+      text-align: right;
+    }
+    .images {
+      img {
+        right: initial;
+        left: 0;
+      }
+    }
+  }
+}
