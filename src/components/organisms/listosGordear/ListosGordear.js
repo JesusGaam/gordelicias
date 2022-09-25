@@ -17,7 +17,7 @@ const ListosGordear = () => {
         </div>
         <div className="youtube-container">
           <YoutubePlayer
-            src="https://www.youtube.com/embed/sBWCeqKF2g0?autoplay=1&rel=0&showinfo=0"
+            src="https://www.youtube.com/embed/a4mIYfqvrgE?autoplay=1&rel=0&showinfo=0"
             img={YoutubeCoverImg}
           />
         </div>

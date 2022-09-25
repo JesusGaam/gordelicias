@@ -1,0 +1,85 @@
+@import "../../../styles/abstracts/all.scss";
+.ingredients-container {
+  position: relative;
+  margin: 40px 0;
+  height: 140vh;
+  background-image: url("img/fondo-azul.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: clip;
+
+  @include media-md-less {
+    height: 110vh;
+  }
+
+  .text-container {
+    position: absolute;
+    z-index: 1;
+
+    @include media-md-greater {
+      width: 30vw;
+      top: 60px;
+      left: 20px;
+      min-width: 300px;
+    }
+
+    @include media-md-less {
+      padding: 30px 20px 0 20px;
+      top: 0px;
+      background: linear-gradient(180deg, rgba(65, 164, 158, 1), rgba(65, 164, 158, 0));
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 40px;
+      color: rgb(255, 169, 56);
+      text-shadow: -3px 0px 0px #ffffff;
+
+      @include media-md-less {
+        font-size: 30px;
+      }
+    }
+    p {
+      color: #fff;
+      font-weight: 300;
+      text-shadow: 0 0 6px rgba(65, 164, 158, 1);
+
+      @include media-md-greater {
+        font-size: 24px;
+      }
+
+      @include media-md {
+        font-size: 22px;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    &.ingredients {
+      @include media-md-greater {
+        top: -40px;
+        left: calc(50% - 25vh);
+        height: 120vh;
+      }
+      @include media-md-less {
+        bottom: 18vh;
+        left: calc(50% - 16vh);
+        height: 60vh;
+      }
+    }
+    &.gordita {
+      bottom: 0px;
+
+      @include media-md-greater {
+        left: calc(50% - 34vh);
+        height: 40vh;
+      }
+      @include media-md-less {
+        left: calc(50% - 23vh);
+        height: 26vh;
+      }
+    }
+  }
+}

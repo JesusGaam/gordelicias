@@ -1,0 +1,47 @@
+@import "../../../styles/abstracts/all.scss";
+.order-here {
+  .gordear-text {
+    display: block;
+    margin: 0 auto 80px auto;
+    width: 80%;
+    max-width: 800px;
+
+    @include media-lg-greater {
+      width: 60%;
+    }
+    @include media-sm {
+      width: 90%;
+      margin-bottom: 40px;
+    }
+  }
+  .nela-moto {
+    display: block;
+    margin: -350px auto 80px auto;
+    height: 300px;
+    z-index: 1;
+
+    @include media-md {
+      margin-top: -300px;
+      height: 250px;
+    }
+
+    @include media-sm {
+      margin-top: -270px;
+      height: 200px;
+    }
+  }
+  .carretera {
+    width: 100%;
+    margin-top: 200px;
+
+    @include media-sm {
+      margin-top: 160px;
+    }
+  }
+  p {
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+  }
+}

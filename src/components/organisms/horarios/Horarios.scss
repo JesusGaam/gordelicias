@@ -1,0 +1,40 @@
+@import "../../../styles/abstracts/all.scss";
+
+.schedules {
+  .title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+
+    @include media-sm {
+      grid-template-columns: auto;
+    }
+
+    > div {
+      text-align: center;
+
+      @include media-sm {
+        + div {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .subtitle {
+    color: rgb(252, 217, 57);
+  }
+  p {
+    color: #fff;
+    + p {
+      padding-top: 4px !important;
+    }
+  }
+}
