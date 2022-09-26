@@ -2,7 +2,7 @@ import React from "react";
 import "./Horarios.scss";
 const Horarios = () => {
   return (
-    <section className="container schedules">
+    <section className="container schedules" id="horario">
       <div>
         <div className="title">Horarios</div>
         <div className="grid">

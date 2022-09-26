@@ -19,10 +19,7 @@
 .product {
   position: relative;
   overflow: hidden;
-
-  + .product {
-    margin-top: 30px;
-  }
+  padding-top: 60px !important;
 
   @include media-md-less {
     padding-bottom: 260px !important;
@@ -37,17 +34,8 @@
     }
   }
 
-  .product-subtitle {
-    display: block;
-    width: 250px;
-    margin-bottom: 40px;
-
-    @include media-md-less {
-      width: 250px;
-    }
-    @include media-sm {
-      width: 40%;
-    }
+  .scritp-text {
+    margin-bottom: 20px;
   }
 
   p {
@@ -122,7 +110,7 @@
     }
 
     .product-subtitle {
-      margin-left: auto;
+      text-align: right;
     }
 
     p {

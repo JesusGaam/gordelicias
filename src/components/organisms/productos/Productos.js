@@ -1,9 +1,7 @@
 import React from "react";
 import "./Productos.scss";
 import ProductosText from "img/productos-text.svg";
-import ComidaText from "img/comida-text.svg";
-import BebidaText from "img/bebidas-text.svg";
-import PostresText from "img/postres-text.svg";
+import Star from "img/star.svg";
 
 import CirculoAzul from "img/circulo-azul.png";
 import CirculoRosa from "img/circulo-rosa.png";
@@ -15,15 +13,25 @@ import ManoVaso from "img/mano-vaso.png";
 const Productos = () => {
   return (
     <>
-      <section className="container products">
+      <section className="container products" id="productos">
         <div>
-          <ProductosText className="products-title" />
+          <div className="grid-title">
+            <div>
+              <Star className="star" />
+            </div>
+            <div>
+              <div className="scritp-text orange shadow-white">Productos</div>
+            </div>
+            <div>
+              <Star className="star" />
+            </div>
+          </div>
         </div>
       </section>
       <section className="container product">
         <div>
           <div>
-            <ComidaText className="product-subtitle" />
+            <div className="scritp-text shadow-orange">Comida</div>
             <p>
               Contamos con guisos muy ricos para nuestras gorditas, puedes
               combinarlos o comerlos solos.
@@ -39,7 +47,7 @@ const Productos = () => {
       <section className="container product right">
         <div>
           <div>
-            <BebidaText className="product-subtitle" />
+            <div className="scritp-text shadow-orange">Bebidas</div>
             <p>
               Tenemos gran variedad de bebidas, son frescas y cálidas, hechas al
               día, tenemos la bebida perfecta para acompañar tus gorditas.
@@ -55,7 +63,7 @@ const Productos = () => {
       <section className="container product">
         <div>
           <div>
-            <PostresText className="product-subtitle" />
+            <div className="scritp-text shadow-orange">Postres</div>
             <p>
               Exquisitos para darle un sabor que hace que tu día sea
               auténticamente delicioso y dulce.

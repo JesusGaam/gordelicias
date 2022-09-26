@@ -20,12 +20,10 @@
     }
   }
 
-  .about-us-title {
-    width: 60%;
+  .scritp-text {
     margin-bottom: 40px;
 
     @include media-md-less {
-      width: 50%;
       margin-bottom: 20px;
     }
   }

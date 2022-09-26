@@ -23,13 +23,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="social-network">
-            <a href="#instagram">
+            <a href="https://www.instagram.com/gordeliciasgdloficial/">
               <Instagram className="instagram" />
             </a>
-            <a href="#facebook">
+            <a href="https://www.facebook.com/Gordeliciasgdloficial">
               <Facebook className="facebook" />
             </a>
-            <a href="#youtube">
+            <a href="https://www.youtube.com/channel/UCTIc_b-fBYB0P5Zgcuy09rw/featured">
               <Youtube className="youtube" />
             </a>
           </div>

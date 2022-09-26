@@ -1,16 +1,15 @@
 import React from "react";
 import "./Nosotros.scss";
-import NosotrosText from "img/nosotros-text.svg";
 import nelaFotos from "img/nela-fotos.png";
 
 const Nosotros = () => {
   return (
-    <section className="container about-us">
+    <section className="container about-us" id="nosotros">
       <div>
         <div className="grid">
           <div>
             <div>
-              <NosotrosText className="about-us-title" />
+            <div className="scritp-text shadow-orange">Nosotros</div>
               <p>
                 Gorditas rellenas de tradición, hechas a mano desde 1977. En
                 Gordelicias queremos proporcionar gorditas nutricionalmente

@@ -50,16 +50,24 @@ const Navbar = () => {
         <div className="background"></div>
         <div className="row">
           <div>
-            <a href="#nosotros">NOSOTROS</a>
+            <a href="#nosotros" onClick={clickHamburgerMenu}>
+              NOSOTROS
+            </a>
           </div>
           <div>
-            <a href="#productos">PRODUCTOS</a>
+            <a href="#productos" onClick={clickHamburgerMenu}>
+              PRODUCTOS
+            </a>
           </div>
           <div>
-            <a href="#carta">CARTA</a>
+            <a href="#carta" onClick={clickHamburgerMenu}>
+              CARTA
+            </a>
           </div>
           <div>
-            <a href="#horario">HORARIO</a>
+            <a href="#horario" onClick={clickHamburgerMenu}>
+              HORARIO
+            </a>
           </div>
         </div>
       </nav>

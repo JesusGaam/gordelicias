@@ -2,11 +2,24 @@
 
 .schedules {
   .title {
-    font-size: 40px;
+    font-family: RifficFree;
+    font-size: 50px;
     text-align: center;
     font-weight: bold;
-    color: #fff;
+    color: rgb(148,216, 211);
+    text-transform: uppercase;
+
+    @include media-lg{
+      font-size: 40px;
+    }
+    @include media-md{
+      font-size: 30px;
+    }
+    @include media-sm{
+      font-size: 24px;
+    }
   }
+
   .grid {
     display: grid;
     grid-template-columns: 50% 50%;

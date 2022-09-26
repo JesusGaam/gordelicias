@@ -7,7 +7,7 @@ const Ingredientes = () => {
   return (
     <div className="ingredients-container">
       <div className="text-container">
-        <div className="title">Ingredientes de calidad</div>
+        <div className="scritp-text orange shadow-white">Ingredientes de calidad</div>
         <p>
           Cada guiso tiene un rico y muy original sabor, son deliciosas y
           calientitas, ven y disfrutalas, de Lunes a Domingo.
