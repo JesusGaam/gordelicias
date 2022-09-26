@@ -46,4 +46,17 @@
     color: #fff;
     text-align: center;
   }
+  div.link-container {
+    text-align: center;
+    a {
+      display: inline-block;
+      font-family: CutenesMonster;
+      color: #ffffff;
+      font-size: 30px;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 16px;
+      background-color: var(--color-secundary);
+    }
+  }
 }

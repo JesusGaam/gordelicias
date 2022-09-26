@@ -1,7 +1,7 @@
 @import "../../../styles/abstracts/all.scss";
 
 .menu {
-  .grid-title{
+  .grid-title {
     margin-bottom: 20px;
   }
   img {
@@ -30,6 +30,19 @@
       display: block;
       margin: 0 auto;
       width: 80%;
+    }
+  }
+  div.link-container {
+    text-align: center;
+    a {
+      display: inline-block;
+      font-family: CutenesMonster;
+      font-size: 30px;
+      color: #ffffff;
+      padding: 10px 20px;
+      margin-top: 30px;
+      border-radius: 16px;
+      background-color: var(--color-primary);
     }
   }
 }

@@ -4,6 +4,7 @@ import MenuImg from "img/menu.jpg";
 import Star from "img/star.svg";
 import PideLineaImg from "img/pide-linea.svg";
 import NelaCompuImg from "img/nela-compu.svg";
+import ButtonInput from "@/components/molecules/form/ButtonInput/ButtonInput";
 
 const Menu = () => {
   return (
@@ -11,13 +12,13 @@ const Menu = () => {
       <div>
         <div className="grid-title">
           <div>
-            <Star className="star" fill="rgb(82, 210, 202)"/>
+            <Star className="star" fill="rgb(82, 210, 202)" />
           </div>
           <div>
             <div className="scritp-text shadow-mint">Menu</div>
           </div>
           <div>
-            <Star className="star" fill="rgb(82, 210, 202)"/>
+            <Star className="star" fill="rgb(82, 210, 202)" />
           </div>
         </div>
         <img src={MenuImg} />
@@ -26,9 +27,21 @@ const Menu = () => {
             <NelaCompuImg />
           </div>
           <div>
-            <PideLineaImg />
+            <div>
+              <PideLineaImg />
+              <div className="link-container desktop">
+                <a href="#pdf">
+                  Descarga el menú en PDF
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+        <div className="link-container mobile">
+                <a href="#pdf">
+                  Descarga el menú en PDF
+                </a>
+              </div>
       </div>
     </section>
   );
