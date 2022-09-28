@@ -29,6 +29,10 @@
     display: flex;
     align-items: center;
 
+    @include media-lg-greater {
+      position: relative;
+    }
+
     @include media-md-greater {
       min-height: 350px;
     }
@@ -57,43 +61,27 @@
 
     img {
       position: absolute;
-      right: 0;
 
       &.circle {
-        height: 300px;
-        top: calc(50% - 150px);
+        right: -30px;
 
         @include media-lg-greater {
-          height: 450px;
-          top: calc(50% - 225px);
+          height: 350px;
+          top: calc(50% - 175px);
         }
-
-        @include media-md-less {
-          height: 260px;
-        }
-
-        @include media-sm {
-          height: 240px;
-        }
-      }
-
-      &.hand {
-        height: 250px;
-        top: calc(50% - 125px);
-
-        @include media-lg-greater {
+        @include media-lg {
           height: 300px;
           top: calc(50% - 150px);
         }
 
         @include media-md-less {
-          height: 210px;
-          margin-bottom: 30px;
+          height: 260px;
+          top: calc(50% - 130px);
         }
 
         @include media-sm {
-          height: 160px;
-          margin-bottom: 30px;
+          height: 200px;
+          top: calc(50% - 100px);
         }
       }
 
@@ -119,7 +107,26 @@
     .images {
       img {
         right: initial;
-        left: 0;
+        left: -30px;
+
+        @include media-lg-greater {
+          height: 420px;
+          top: calc(50% - 210px);
+        }
+        @include media-lg {
+          height: 380px;
+          top: calc(50% - 190px);
+        }
+
+        @include media-md-less {
+          height: 320px;
+          top: calc(50% - 160px);
+        }
+
+        @include media-sm {
+          height: 240px;
+          top: calc(50% - 120px);
+        }
       }
     }
   }

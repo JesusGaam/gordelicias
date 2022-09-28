@@ -1,14 +1,9 @@
 import React from "react";
 import "./Productos.scss";
-import ProductosText from "img/productos-text.svg";
 import Star from "img/star.svg";
-
-import CirculoAzul from "img/circulo-azul.png";
+import CirculoVerde from "img/circulo-verde.png";
 import CirculoRosa from "img/circulo-rosa.png";
-import CirculoArillo from "img/circulo-amarillo.png";
-
-import ManoGordita from "img/mano-gordita.png";
-import ManoVaso from "img/mano-vaso.png";
+import CirculoNaranja from "img/circulo-naranja.png";
 
 const Productos = () => {
   return (
@@ -38,8 +33,7 @@ const Productos = () => {
             </p>
           </div>
           <div className="images">
-            <img src={CirculoAzul} className="circle" />
-            <img src={ManoGordita} className="hand" />
+            <img src={CirculoVerde} className="circle" />
           </div>
         </div>
       </section>
@@ -55,7 +49,6 @@ const Productos = () => {
           </div>
           <div className="images">
             <img src={CirculoRosa} className="circle" />
-            <img src={ManoVaso} className="hand" />
           </div>
         </div>
       </section>
@@ -70,8 +63,7 @@ const Productos = () => {
             </p>
           </div>
           <div className="images">
-            <img src={CirculoArillo} className="circle" />
-            <img src={ManoGordita} className="hand" />
+            <img src={CirculoNaranja} className="circle" />
           </div>
         </div>
       </section>
