@@ -1,6 +1,7 @@
 const path = require("path");
 const dotenv = require("dotenv");
 const webpack = require("webpack");
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const pagesCore = require(path.join(__dirname, "/src/pages-core.js"));
@@ -83,12 +84,18 @@ module.exports = (env) => ({
         use: ["@svgr/webpack"],
       },
       {
-        test: /\.(png|jpe?g|gif|ttf|eot|otf|woff|woff2)$/i,
-        use: [
-          {
-            loader: "file-loader",
-          },
-        ],
+        loader: "file-loader",
+        test: /\.(png|jpe?g|gif)$/i,
+        options: {
+          outputPath: "img",
+        },
+      },
+      {
+        loader: "file-loader",
+        test: /\.(ttf|eot|otf|woff|woff2)$/i,
+        options: {
+          outputPath: "fonts",
+        },
       },
     ],
   },
@@ -96,6 +103,13 @@ module.exports = (env) => ({
     new webpack.DefinePlugin(getEnvKeys(env)),
     new MiniCssExtractPlugin({
       filename: "[name].css",
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "public/favicon", to: "favicon" },
+        { from: "public/manifest.json" },
+        { from: "public/browserconfig.xml" },
+      ],
     }),
   ].concat(
     pagesCore.getJSONPages().map((page) => new HtmlWebPackPlugin({ ...page }))
