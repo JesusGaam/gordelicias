@@ -4,7 +4,6 @@ import MenuImg from "img/menu.jpg";
 import Star from "img/star.svg";
 import PideLineaImg from "img/pide-linea.svg";
 import NelaCompuImg from "img/nela-compu.svg";
-import ButtonInput from "@/components/molecules/form/ButtonInput/ButtonInput";
 
 const Menu = () => {
   return (

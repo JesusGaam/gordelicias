@@ -10,6 +10,7 @@ import OrdenaAqui from "@/components/organisms/ordenaAqui/OrdenaAqui";
 import Encuentranos from "@/components/organisms/encuentranos/Encuentranos";
 import Horarios from "@/components/organisms/horarios/Horarios";
 import Footer from "@/components/organisms/footer/Footer";
+import PlaticaNosotros from "@/components/organisms/platicaNosotros/PlaticaNosotros";
 import "./Home.css";
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       <OrdenaAqui />
       <Encuentranos />
       <Horarios />
+      <PlaticaNosotros />
       <Footer />
     </>
   );

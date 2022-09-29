@@ -9,7 +9,7 @@ $sizeText: 18px;
 $borderRadiusBox: 20px;
 
 $horizontalPaddingInput: 20px;
-$borderRadiusInput: 50px;
+$borderRadiusInput: 16px;
 
 $headerHeight: 84px;
 
@@ -39,11 +39,11 @@ $breakPointXL: 1200px;
   --color-success: #28972d;
   --color-info: #008aff;
   --color-warning: #ff9800;
-  --color-danger: #e51c23;
+  --color-danger: #ff6600;
   --color-disabled: #a1a1a1;
 
   --color-background: #f2f2f2;
-  --color-text: #090909;
+  --color-text: #d3d3d3;
   --color-button-primary: #ffffff;
   --color-button-secundary: #ffffff;
   --color-link: #090909;
@@ -53,6 +53,7 @@ $breakPointXL: 1200px;
 
   --color-background-input: #f9f9f9;
   --color-border-input: #c9c9c9;
+  --color-text-input: #1b1b1b;
 }
 
 .dark {
@@ -84,4 +85,5 @@ $breakPointXL: 1200px;
 
   --color-background-input: #1B1B1B;
   --color-border-input: #323138;
+  --color-text-input: #c2c2c2;
 }

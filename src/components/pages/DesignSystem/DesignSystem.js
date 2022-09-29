@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./style.scss";
 
-import ButtonInput from "@/components/molecules/form/buttonInput/ButtonInput";
-import TextInput from "@/components/molecules/form/textInput/TextInput";
-import EmailInput from "@/components/molecules/form/emailInput/EmailInput";
-import PasswordInput from "@/components/molecules/form/passwordInput/PasswordInput";
+import ButtonInput from "@/components/molecules/form/button/Button";
+import TextField from "@/components/molecules/form/textField/TextField";
+import EmailField from "@/components/molecules/form/emailField/EmailField";
+import PasswordField from "@/components/molecules/form/passwordField/PasswordField";
 import Text from "@/components/molecules/text/Text";
 
 const Home = () => {
@@ -13,7 +13,6 @@ const Home = () => {
     required: true,
     label: "Text Input",
     value: "",
-    defaultValue: "",
     placeholder: "Open text input",
     helper: "",
     defaultHelper: "Enter an alphanumeric value",
@@ -26,7 +25,6 @@ const Home = () => {
     label: "Email Input",
     placeholder: "your.email@domain.com",
     defaultHelper: "Only accept emails",
-    emit: (value, statusError) => emitEmail(value, statusError),
   });
 
   const emitInput = (value, statusError) => {
@@ -97,22 +95,25 @@ const Home = () => {
             options={{
               mode: "primary",
               defaultValue: "Primary",
-              emit: (e) => emitButton(e),
             }}
+            onClick={(e) => emitButton(e)}
           />
           <ButtonInput
             options={{
               mode: "secundary",
               defaultValue: "Secundary",
-              emit: (e) => emitButton(e),
             }}
+            onClick={(e) => emitButton(e)}
           />
         </div>
 
         <h2 className="spacing">Forms</h2>
-        <TextInput options={inputOptions} />
-        <EmailInput options={emailOptions} />
-        <PasswordInput
+        <TextField options={inputOptions} />
+        <EmailField
+          options={emailOptions}
+          handleValue={(value, statusError) => emitEmail(value, statusError)}
+        />
+        <PasswordField
           options={{
             label: "Password Input",
             defaultHelper: "Enter your password",
