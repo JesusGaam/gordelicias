@@ -6,7 +6,7 @@ import Chevron from "img/chevron-down-scroll-down.svg";
 import { getRandomNumber } from "../../../../utils/Utilities";
 import { removeClass, addClass } from "../../../../utils/Utilities";
 
-const Select = ({ options, handleValue = (_value, _error) => {} }) => {
+const Select = ({ options, handleValue = (_value, _init) => {} }) => {
   const {
     id = getRandomNumber(10000, 1000000),
     error = false,
@@ -41,6 +41,8 @@ const Select = ({ options, handleValue = (_value, _error) => {} }) => {
       }
     }
     setValue(optionList[selectedKey].label);
+    handleValue(optionList[selectedKey].label, true);
+  
   }, []);
 
   const onClick = (element, selectedValue) => {
@@ -50,17 +52,9 @@ const Select = ({ options, handleValue = (_value, _error) => {} }) => {
     );
     addClass(element, "selected");
 
-    setValue(selectedValue.label);
     setShowOptions(false);
-    handleValue(selectedValue.id, validationEvent(selectedValue.id));
-  };
-
-  const validationEvent = (value) => {
-    var error = required && value == 0;
-    return {
-      error,
-      message: error ? "Este campo es obligatorio" : "",
-    };
+    setValue(selectedValue.label);
+    handleValue(selectedValue.id);
   };
 
   return (

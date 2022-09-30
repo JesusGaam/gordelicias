@@ -4,7 +4,7 @@ import Label from "../label/Label";
 import HelperText from "../helperText/HelperText";
 import "./PasswordField.scss";
 
-const PasswordInput = ({ options, handleValue = (_value, _error) => {} }) => {
+const PasswordInput = ({ options, handleValue = (_value, _init) => {} }) => {
   const {
     id = getRandomNumber(10000, 1000000),
     error = false,
@@ -19,7 +19,7 @@ const PasswordInput = ({ options, handleValue = (_value, _error) => {} }) => {
 
   useEffect(() => {
     if (value.length > 0) {
-      handleValue(value);
+      handleValue(value, true);
     }
   }, []);
 

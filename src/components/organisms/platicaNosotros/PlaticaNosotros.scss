@@ -1,12 +1,36 @@
+@import "../../../styles/abstracts/all.scss";
+
 .talk-with-us {
+  > div {
+    max-width: 900px !important;
+  }
   .form {
     max-width: 500px !important;
     margin: 40px auto 0 auto;
-    .text{
-      margin-bottom: 30px;
+
+    .text-form {
+      margin: 50px 0;
+
+      p {
+        line-height: 1.2;
+
+        @include media-lg-greater {
+          font-size: 23px;
+        }
+
+        + p {
+          padding-top: 20px !important;
+        }
+      }
     }
   }
   .scritp-text {
-    text-align: center;
+    @include media-md {
+      font-size: 70px;
+    }
+    @include media-sm-greater {
+      
+      text-align: center;
+    }
   }
 }

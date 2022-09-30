@@ -1,26 +1,17 @@
 import { useState } from "react";
+import { isEmail } from "@/utils/Utilities";
 
 const usePlaticaNosotros = () => {
   const [subject, setSubject] = useState({
     error: false,
     label: "Selecciona un tema de interés",
-    value: "",
+    value: 0,
     required: true,
     optionList: [
       { label: "Información general", id: "INFO", selected: true },
       { label: "Tengo una queja", id: "QUEJA" },
     ],
   });
-  const handleSubject = (value, statusError) => {
-    setSubject({
-      ...subject,
-      value,
-      error: statusError.error,
-      helper: statusError.error ? statusError.message : subject.defaultHelper,
-    });
-
-    setCategory({ ...category, show: value === "QUEJA" });
-  };
 
   const [name, setName] = useState({
     error: false,
@@ -33,15 +24,6 @@ const usePlaticaNosotros = () => {
     defaultHelper: "",
   });
 
-  const handleName = (value, statusError) => {
-    setName({
-      ...name,
-      value,
-      error: statusError.error,
-      helper: statusError.error ? statusError.message : name.defaultHelper,
-    });
-  };
-
   const [email, setEmail] = useState({
     error: false,
     required: true,
@@ -53,29 +35,12 @@ const usePlaticaNosotros = () => {
     defaultHelper: "",
   });
 
-  const handleEmail = (value, statusError) => {
-    setEmail({
-      ...email,
-      value,
-      error: statusError.error,
-      helper: statusError.error ? statusError.message : email.defaultHelper,
-    });
-  };
-
   const [phone, setPhone] = useState({
     error: false,
     required: false,
     label: "Número de teléfono",
     value: "",
   });
-  const handlePhone = (value, statusError) => {
-    setPhone({
-      ...phone,
-      value,
-      error: statusError.error,
-      helper: statusError.error ? statusError.message : phone.defaultHelper,
-    });
-  };
 
   const [category, setCategory] = useState({
     error: true,
@@ -100,16 +65,6 @@ const usePlaticaNosotros = () => {
     ],
   });
 
-  const handleCategory = (value, statusError) => {
-    console.log({ ...category });
-    setCategory({
-      ...category,
-      value,
-      error: statusError.error,
-      helper: statusError.error ? statusError.message : category.defaultHelper,
-    });
-  };
-
   const [message, setMessage] = useState({
     error: false,
     required: true,
@@ -119,16 +74,131 @@ const usePlaticaNosotros = () => {
     defaultHelper: "",
   });
 
-  const handleMessage = (value, statusError) => {
-    setMessage({
-      ...message,
+  const handleSubject = (value, initHandle) => {
+    let error = false;
+    let helper = subject.defaultHelper;
+
+    if (!initHandle) {
+      error = category.required && value == 0;
+      if (error) {
+        helper = "Este campo es obligatorio";
+      }
+    }
+
+    setSubject({
+      ...subject,
       value,
-      error: statusError.error,
-      helper: statusError.error ? statusError.message : message.defaultHelper,
+      error,
+      helper,
+    });
+
+    setCategory({ ...category, show: value === "QUEJA" });
+  };
+
+  /**
+   *
+   * @param {*} value
+   */
+  const handleName = (value) => {
+    var error = name.required && value.length == 0;
+    const helper = error ? "Este campo es obligatorio" : name.defaultHelper;
+
+    setName({
+      ...name,
+      value,
+      error,
+      helper,
     });
   };
 
-  const handleSubmit = () => {};
+  const handleEmail = (value) => {
+    let error = true;
+    let helper = "";
+
+    if (email.required && value.length == 0) {
+      helper = "Este campo es obligatorio";
+    } else if (!isEmail(value)) {
+      helper = "El correo electrónico es incorrecto";
+    } else {
+      error = false;
+    }
+
+    setEmail({
+      ...email,
+      value,
+      error,
+      helper,
+    });
+  };
+
+  const handlePhone = (value) => {
+    var error = false;
+    var helper = "";
+
+    if (phone.required && value.length == 0) {
+      error = true;
+      helper = "Este campo es obligatorio";
+    } else if (value.length > 0 && value.length !== 10) {
+      error = true;
+      helper = "Introduce diez dígitos";
+    }
+
+    setPhone({
+      ...phone,
+      value,
+      error,
+      helper,
+    });
+  };
+
+  const handleCategory = (value) => {
+    const error = name.required && subject.value === "QUEJA" && value == 0;
+    const helper = error ? "Este campo es obligatorio" : name.defaultHelper;
+
+    setCategory({
+      ...category,
+      value,
+      error,
+      helper,
+    });
+  };
+
+  const handleMessage = (value) => {
+    var error = message.required && value.length == 0;
+    const helper = error ? "Este campo es obligatorio" : message.defaultHelper;
+
+    setMessage({
+      ...message,
+      value,
+      error,
+      helper,
+    });
+  };
+
+  const handleSubmit = () => {
+    handleSubject(subject.value);
+    handleName(name.value);
+    handleEmail(email.value);
+    handleCategory(category.value);
+    handleMessage(message.value);
+
+    if (
+      !subject.error &&
+      !name.error &&
+      !email.error &&
+      !category.error &&
+      !message.error
+    ) {
+      console.log("submit :D");
+      console.log({
+        subject: subject.value,
+        name: name.value,
+        email: email.value,
+        category: category.value,
+        message: message.value,
+      });
+    }
+  };
 
   return {
     subject,

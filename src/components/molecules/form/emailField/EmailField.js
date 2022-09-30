@@ -4,7 +4,7 @@ import Label from "../label/Label";
 import HelperText from "../helperText/HelperText";
 import "./EmailField.scss";
 
-const EmailField = ({ options, handleValue = (_value, _error) => {} }) => {
+const EmailField = ({ options, handleValue = (_value, _init) => {} }) => {
   const {
     id = getRandomNumber(10000, 1000000),
     error = false,
@@ -19,23 +19,9 @@ const EmailField = ({ options, handleValue = (_value, _error) => {} }) => {
 
   useEffect(() => {
     if (value.length > 0) {
-      handleValue(value);
+      handleValue(value, true);
     }
   }, []);
-
-  const validationEvent = (value) => {
-    let error = true;
-    let message = "";
-
-    if (required && value.length == 0) {
-      message = "Este campo es obligatorio";
-    } else if (!isEmail(value)) {
-      message = "El correo electrónico es incorrecto";
-    } else {
-      error = false;
-    }
-    return { error, message };
-  };
 
   return (
     <div className={`form-element email ${disabled ? "disabled" : ""}`}>
@@ -52,9 +38,7 @@ const EmailField = ({ options, handleValue = (_value, _error) => {} }) => {
           type="text"
           value={value}
           placeholder={placeholder}
-          onInput={(e) =>
-            handleValue(e.target.value, validationEvent(e.target.value))
-          }
+          onInput={(e) => handleValue(e.target.value)}
           autoComplete="off"
         />
       </div>

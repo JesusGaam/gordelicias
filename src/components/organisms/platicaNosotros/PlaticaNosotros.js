@@ -27,9 +27,9 @@ const PlaticaNosotros = () => {
   return (
     <section className="container talk-with-us">
       <div>
-        <div className="scritp-text shadow-mint">¡Platica con nosotros</div>
+        <div className="scritp-text shadow-mint">Platica con nosotros</div>
         <div className="form">
-          <div className="text">
+          <div className="text-form">
             <p>En Gordelicias queremos saber de ti.</p>
             <p>Favor de llenar el formulario siguiente.</p>
           </div>
@@ -38,7 +38,9 @@ const PlaticaNosotros = () => {
           <EmailField options={email} handleValue={handleEmail} />
           <PhoneField options={phone} handleValue={handlePhone} />
 
-          {category.show && <Select options={category} emit={handleCategory} />}
+          {category.show && (
+            <Select options={category} handleValue={handleCategory} />
+          )}
           <TextArea options={message} handleValue={handleMessage} />
           <Button
             options={{

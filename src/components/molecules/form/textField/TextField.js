@@ -4,7 +4,7 @@ import Label from "../label/Label";
 import HelperText from "../helperText/HelperText";
 import "./TextField.scss";
 
-const TextInput = ({ options, handleValue = (_value, _error) => {} }) => {
+const TextInput = ({ options, handleValue = (_value, _init) => {} }) => {
   const {
     id = getRandomNumber(10000, 1000000),
     error = false,
@@ -19,18 +19,9 @@ const TextInput = ({ options, handleValue = (_value, _error) => {} }) => {
 
   useEffect(() => {
     if (value.length > 0) {
-      handleValue(value);
+      handleValue(value, true);
     }
   }, []);
-
-  const validationEvent = (value) => {
-    var error = required && value.length == 0;
-
-    return {
-      error,
-      message: error ? "Este campo es obligatorio" : "",
-    };
-  };
 
   return (
     <div className={`form-element text ${disabled ? "disabled" : ""}`}>
@@ -48,7 +39,7 @@ const TextInput = ({ options, handleValue = (_value, _error) => {} }) => {
           value={value}
           placeholder={placeholder}
           onInput={(e) =>
-            handleValue(e.target.value, validationEvent(e.target.value))
+            handleValue(e.target.value)
           }
           autoComplete="off"
         />
