@@ -92,6 +92,13 @@ module.exports = (env) => ({
       },
       {
         loader: "file-loader",
+        test: /\.(pdf)$/i,
+        options: {
+          outputPath: "docs",
+        },
+      },
+      {
+        loader: "file-loader",
         test: /\.(ttf|eot|otf|woff|woff2)$/i,
         options: {
           outputPath: "fonts",

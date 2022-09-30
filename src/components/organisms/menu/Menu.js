@@ -4,6 +4,7 @@ import MenuImg from "img/menu.jpg";
 import Star from "img/star.svg";
 import PideLineaImg from "img/pide-linea.svg";
 import NelaCompuImg from "img/nela-compu.svg";
+import pdfMenu from "../../../assets/gordelicias-menu.pdf"
 
 const Menu = () => {
   return (
@@ -29,18 +30,14 @@ const Menu = () => {
             <div>
               <PideLineaImg />
               <div className="link-container desktop">
-                <a href="#pdf">
-                  Descarga el menú en PDF
-                </a>
+                <a href={pdfMenu} target="_blank">Descarga el menú en PDF</a>
               </div>
             </div>
           </div>
         </div>
         <div className="link-container mobile">
-                <a href="#pdf">
-                  Descarga el menú en PDF
-                </a>
-              </div>
+          <a href={pdfMenu} target="_blank">Descarga el menú en PDF</a>
+        </div>
       </div>
     </section>
   );
