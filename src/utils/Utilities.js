@@ -18,6 +18,34 @@ export const isEmail = (email) => {
   return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,6})+$/.test(email);
 };
 
+export const round = function (number, nDigits = 2) {
+  nDigits = nDigits > 0 ? Math.pow(10, nDigits) : 1;
+  return Math.round(number * nDigits) / nDigits;
+};
+
+export const ceil = function (number, nDigits = 2) {
+  nDigits = nDigits > 0 ? Math.pow(10, nDigits) : 1;
+  return Math.ceil(number * nDigits) / nDigits;
+};
+
+export const floor = function (number, nDigits = 2) {
+  nDigits = nDigits > 0 ? Math.pow(10, nDigits) : 1;
+  return Math.floor(number * nDigits) / nDigits;
+};
+
+export const getPosition = function (element) {
+  var xPosition = 0;
+  var yPosition = 0;
+
+  while (element) {
+    xPosition += element.offsetLeft - element.scrollLeft + element.clientLeft;
+    yPosition += element.offsetTop - element.scrollTop + element.clientTop;
+    element = element.offsetParent;
+  }
+
+  return { left: xPosition, top: yPosition };
+};
+
 export const hasClass = (selector, className) => {
   try {
     return selector.className.indexOf(className) >= 0;

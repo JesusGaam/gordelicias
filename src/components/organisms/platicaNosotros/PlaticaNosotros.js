@@ -43,6 +43,7 @@ const PlaticaNosotros = () => {
           )}
           <TextArea options={message} handleValue={handleMessage} />
           <Button
+            className="submit"
             options={{
               mode: "secundary",
               value: "Enviar",

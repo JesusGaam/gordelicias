@@ -26,7 +26,7 @@ const Home = () => {
       <OrdenaAqui />
       <Encuentranos />
       <Horarios />
-      <PlaticaNosotros />
+      <PlaticaNosotros/>
       <Footer />
     </>
   );

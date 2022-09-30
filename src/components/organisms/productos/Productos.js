@@ -32,8 +32,8 @@ const Productos = () => {
               combinarlos o comerlos solos.
             </p>
           </div>
-          <div className="images">
-            <img src={CirculoVerde} className="circle" />
+          <div className="images ">
+            <img src={CirculoVerde} className="circle fade-in-right-effect delay-200" />
           </div>
         </div>
       </section>
@@ -48,7 +48,7 @@ const Productos = () => {
             </p>
           </div>
           <div className="images">
-            <img src={CirculoRosa} className="circle" />
+            <img src={CirculoRosa} className="circle fade-in-left-effect delay-200" />
           </div>
         </div>
       </section>
@@ -63,7 +63,7 @@ const Productos = () => {
             </p>
           </div>
           <div className="images">
-            <img src={CirculoNaranja} className="circle" />
+            <img src={CirculoNaranja} className="circle fade-in-right-effect delay-200" />
           </div>
         </div>
       </section>

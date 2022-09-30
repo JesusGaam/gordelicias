@@ -109,6 +109,7 @@ module.exports = (env) => ({
         { from: "public/favicon", to: "favicon" },
         { from: "public/manifest.json" },
         { from: "public/browserconfig.xml" },
+        { from: "src/assets/joterias", to: "js/joterias" },
       ],
     }),
   ].concat(

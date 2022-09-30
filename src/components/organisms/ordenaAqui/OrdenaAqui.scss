@@ -3,41 +3,23 @@
 .order-here {
   .gordear-text {
     display: block;
-    margin: 0 auto 80px auto;
-    width: 80%;
+    margin: 0 auto 10px auto;
+    height: calc(100% - 344px - 10px);
     max-width: 800px;
 
-    @include media-lg-greater {
-      width: 60%;
+    @include media-lg-less {
+      max-width: 90vw;
     }
-    @include media-sm {
-      width: 90%;
-      margin-bottom: 40px;
-    }
-  }
-  .nela-moto {
-    display: block;
-    margin: -350px auto 80px auto;
-    height: 300px;
-    z-index: 1;
-
     @include media-md {
-      margin-top: -300px;
-      height: 250px;
+      height: calc(100% - 326px - 10px);
     }
-
     @include media-sm {
-      margin-top: -270px;
-      height: 200px;
+      height: calc(100% - 266px - 10px);
     }
   }
-  .carretera {
-    width: 100%;
-    margin-top: 200px;
-
-    @include media-sm {
-      margin-top: 160px;
-    }
+  .moto-nela-container {
+    position: absolute;
+    bottom: 0;
   }
   p {
     font-family: Monteral;
