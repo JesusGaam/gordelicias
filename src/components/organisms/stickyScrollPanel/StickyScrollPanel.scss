@@ -1,6 +1,13 @@
 @import "../../../styles/abstracts/all.scss";
-.scroll-panel {
+.sticky-scroll-panel {
   overflow: initial;
+
+  > div {
+    position: sticky;
+    position: -webkit-sticky;
+    top: $headerHeight;
+    overflow: hidden;
+  }
 
   .panel {
     position: relative;

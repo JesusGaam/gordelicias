@@ -22,6 +22,7 @@ const ProductosCarrusel = () => {
       organicArrows={false}
       buttonContentLeft={<LeftArrow width="80px" />}
       buttonContentRight={<RightArrow width="80px" />}
+      bullets={false}
     >
       <div className="carousel-item">
         <img className="principal" src={orangeImg} />

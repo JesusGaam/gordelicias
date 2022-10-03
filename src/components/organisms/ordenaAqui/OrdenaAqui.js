@@ -3,7 +3,7 @@ import "./OrdenaAqui.scss";
 
 import PensandoGordear from "img/pensando-gordear.svg";
 import MotoNelaAnimation from "@/components/molecules/youtubePlayer/motoNelaAnimation/MotoNelaAnimation";
-import ScrollPanel from "@/components/organisms/scrollPanel/ScrollPanel";
+import StickyScrollPanel from "@/components/organisms/StickyScrollPanel/StickyScrollPanel";
 
 const OrdenaAqui = () => {
   const [nelaAnimation, setNelaAnimation] = useState({
@@ -40,10 +40,10 @@ const OrdenaAqui = () => {
   return (
     <>
       <div className="container order-here">
-        <ScrollPanel onScrollProcess={onScrollProcess} height={"150vh"}>
+        <StickyScrollPanel onScrollProcess={onScrollProcess} height={"150vh"}>
           <PensandoGordear className="gordear-text" />
           <MotoNelaAnimation nelaAnimation={nelaAnimation} reverse ={reverse}/>
-        </ScrollPanel>
+        </StickyScrollPanel>
         <p style={{ marginTop: "20px" }}>
           Ordena en linea y tenlas pronto en tus manos..
         </p>

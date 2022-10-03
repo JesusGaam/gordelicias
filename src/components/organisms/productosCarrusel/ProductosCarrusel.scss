@@ -6,6 +6,9 @@
   max-width: $breakPointXL;
   height: 500px;
   margin: 0 auto;
+  .awssld__content{
+    background-color: transparent !important;
+  }
 
   @include media-md-less {
     height: 400px;
