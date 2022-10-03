@@ -4,35 +4,33 @@ import withAutoplay from "react-awesome-slider/dist/autoplay";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
-import "./Header.scss";
+import "./ProductosCarrusel.scss";
+
+import LeftArrow from "img/left-arrow.svg";
+import RightArrow from "img/right-arrow.svg";
 
 import orangeImg from "img/gordita.png";
-import gorditaImg from "img/carrusel-header-orange.jpg";
 import gordita2Img from "img/carrusel-gordita.png";
 
-const Header = () => {
+const ProductosCarrusel = () => {
   return (
     <AutoplaySlider
-      className={"carousel-header"}
+      className={"product-carousel"}
       play={true}
       cancelOnInteraction={true} // should stop playing on user interaction
       interval={3000}
-      bullets={false}
+      organicArrows={false}
+      buttonContentLeft={<LeftArrow width="80px" />}
+      buttonContentRight={<RightArrow width="80px" />}
     >
       <div className="carousel-item">
-        <a href="#item1">
-          <img className="background" src={gorditaImg} />
-          <img className="principal" src={orangeImg} />
-        </a>
+        <img className="principal" src={orangeImg} />
       </div>
       <div className="carousel-item">
-        <a href="#item2">
-          <img className="background" src={gorditaImg} />
-          <img className="principal" src={gordita2Img} />
-        </a>
+        <img className="principal" src={gordita2Img} />
       </div>
     </AutoplaySlider>
   );
 };
 
-export default Header;
+export default ProductosCarrusel;

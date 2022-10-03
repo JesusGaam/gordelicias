@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "@/components/organisms/navbar/Navbar";
-import Header from "@/components/organisms/header/Header";
+import Promos from "@/components/organisms/promos/Promos";
 import ListosGordear from "@/components/organisms/listosGordear/ListosGordear";
 import Nosotros from "@/components/organisms/nosotros/Nosotros";
 import Productos from "@/components/organisms/productos/Productos";
 import Menu from "@/components/organisms/menu/Menu";
+import ProductosCarrusel from "@/components/organisms/productosCarrusel/ProductosCarrusel";
 import Ingredientes from "@/components/organisms/ingredientes/Ingredientes";
 import OrdenaAqui from "@/components/organisms/ordenaAqui/OrdenaAqui";
 import Encuentranos from "@/components/organisms/encuentranos/Encuentranos";
@@ -17,16 +18,17 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Header />
+      <Promos />
       <ListosGordear />
       <Nosotros />
       <Productos />
       <Menu />
+      <ProductosCarrusel />
       <Ingredientes />
       <OrdenaAqui />
       <Encuentranos />
       <Horarios />
-      <PlaticaNosotros/>
+      <PlaticaNosotros />
       <Footer />
     </>
   );
