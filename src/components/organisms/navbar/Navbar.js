@@ -18,8 +18,8 @@ const Navbar = () => {
           <div className="grid">
             <div className="link-container">
               <div>
-                <a href="#nosotros">NOSOTROS</a>
-                <a href="#productos">PRODUCTOS</a>
+                <a href="/#nosotros">NOSOTROS</a>
+                <a href="/#productos">PRODUCTOS</a>
               </div>
               <div className="banderitas-container">
                 <div></div>
@@ -30,8 +30,8 @@ const Navbar = () => {
             </div>
             <div className="link-container">
               <div>
-                <a href="#carta">CARTA</a>
-                <a href="#horario">HORARIO</a>
+                <a href="/#carta">CARTA</a>
+                <a href="/#horario">HORARIO</a>
               </div>
               <div className="banderitas-container right">
                 <div></div>
@@ -50,22 +50,22 @@ const Navbar = () => {
         <div className="background"></div>
         <div className="row">
           <div>
-            <a href="#nosotros" onClick={clickHamburgerMenu}>
+            <a href="/#nosotros" onClick={clickHamburgerMenu}>
               NOSOTROS
             </a>
           </div>
           <div>
-            <a href="#productos" onClick={clickHamburgerMenu}>
+            <a href="/#productos" onClick={clickHamburgerMenu}>
               PRODUCTOS
             </a>
           </div>
           <div>
-            <a href="#carta" onClick={clickHamburgerMenu}>
+            <a href="/#carta" onClick={clickHamburgerMenu}>
               CARTA
             </a>
           </div>
           <div>
-            <a href="#horario" onClick={clickHamburgerMenu}>
+            <a href="/#horario" onClick={clickHamburgerMenu}>
               HORARIO
             </a>
           </div>

@@ -9,8 +9,11 @@ import "./ProductosCarrusel.scss";
 import LeftArrow from "img/left-arrow.svg";
 import RightArrow from "img/right-arrow.svg";
 
-import orangeImg from "img/gordita.png";
-import gordita2Img from "img/carrusel-gordita.png";
+import platillo1 from "img/gordita.png";
+import platillo2 from "img/carrusel-gordita.png";
+import platillo3 from "img/carrusel-birria-nopales-picadillo.png";
+import platillo4 from "img/carrusel-favoritas.png";
+import platillo5 from "img/carrusel-res-birria-rajas.png";
 
 const ProductosCarrusel = () => {
   return (
@@ -25,10 +28,19 @@ const ProductosCarrusel = () => {
       bullets={false}
     >
       <div className="carousel-item">
-        <img className="principal" src={orangeImg} />
+        <img className="principal" src={platillo1} />
       </div>
       <div className="carousel-item">
-        <img className="principal" src={gordita2Img} />
+        <img className="principal" src={platillo2} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={platillo3} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={platillo4} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={platillo5} />
       </div>
     </AutoplaySlider>
   );
