@@ -18,6 +18,11 @@ module.exports.pages = [
     title: "Gordelicias",
   },
   {
+    filename: "aviso-de-privacidad.html",
+    component: "@/components/pages/avisoPrivacidad/AvisoPrivacidad.js",
+    title: "Aviso de Privacidad | Gordelicias",
+  },
+  {
     filename: "design-system.html",
     component: "@/components/pages/DesignSystem/DesignSystem.js",
     title: "Design System",
