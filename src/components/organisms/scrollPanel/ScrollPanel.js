@@ -34,10 +34,6 @@ const ScrollPanel = ({
     setBeforeScroll(currentScroll);
   }, [currentScroll]);
 
-  const getWindowDimensions = () => {
-    var panel = scrollPanel.current.querySelector(".panel");
-  };
-
   const defineScrollProcess = () => {
     var container = scrollPanel.current;
     var topContainer = getPosition(container).top + navbarHeight;

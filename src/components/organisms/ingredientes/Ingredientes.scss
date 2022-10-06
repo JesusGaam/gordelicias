@@ -61,34 +61,126 @@
     }
   }
 
-  img {
+  img.gordita {
     position: absolute;
 
-    &.ingredients {
-      @include media-lg-less {
-        top: 200px;
-        left: calc(50% - 27vh);
-        height: 88vh;
-      }
+    @include media-lg-less {
+      left: calc(50% - 28vh);
+      height: 32vh;
+      bottom: -15vh;
+    }
 
-      @include media-lg-greater {
-        top: -40px;
-        left: calc(50% - 6vh);
-        height: 110vh;
+    @include media-lg-greater {
+      bottom: -18vh;
+      left: calc(50% - 14vh);
+      height: 40vh;
+    }
+  }
+
+  .back-intredients,
+  .front-intredients {
+    position: absolute;
+    right: 0;
+
+    > div {
+      position: relative;
+      height: 100%;
+    }
+
+    @include media-lg-less {
+      top: 200px;
+      left: calc(50% - 27vh);
+      height: 88vh;
+      width: 64vh;
+    }
+
+    @include media-lg-greater {
+      top: -40px;
+      left: calc(50% - 6vh);
+      height: 110vh;
+      width: 80vh;
+    }
+  }
+
+  .back-intredients {
+    img {
+      position: absolute;
+      &.carne1 {
+        bottom: 0;
+        width: 30%;
+      }
+      &.carne2 {
+        bottom: 48%;
+        width: 26%;
+      }
+      &.carne3 {
+        bottom: 22%;
+        right: 20%;
+        width: 30%;
+      }
+      &.papa2 {
+        top: 28%;
+        right: 20%;
+        width: 30%;
       }
     }
-    &.gordita {
-      @include media-lg-less {
-        left: calc(50% - 28vh);
-        height: 32vh;
-        bottom: -25vh;
-      }
+  }
 
-      @include media-lg-greater {
-        bottom: -25vh;
-        left: calc(50% - 14vh);
-        height: 40vh;
+  .front-intredients {
+    img {
+      position: absolute;
+      &.cebolla {
+        right: 26%;
+        width: 38%;
+        top: -5%;
+      }
+      &.chanpinon2 {
+        bottom: 12%;
+        right: 40%;
+        width: 30%;
+      }
+      &.chileRojo {
+        bottom: 0%;
+        right: 28%;
+        width: 30%;
+      }
+      &.chileVerde {
+        top: 50%;
+        width: 20%;
+        left: 2%;
+      }
+      &.jitomate1 {
+        top: 42%;
+        width: 34%;
+        left: 24%;
+      }
+      &.jitomate2 {
+        bottom: 11%;
+        left: -2%;
+        width: 30%;
+      }
+      &.chanpinon1 {
+        top: 0%;
+        left: 0%;
+        width: 24%;
+      }
+      &.papa1 {
+        top: 20%;
+        left: 7%;
+        width: 26%;
       }
     }
+
+    // @include media-lg-less {
+    //   top: 200px;
+    //   left: calc(50% - 27vh);
+    //   height: 88vh;
+    // }
+
+    // @include media-lg-greater {
+    //   top: -40px;
+    //   left: calc(50% - 6vh);
+    //   height: 110vh;
+    // }
   }
 }
