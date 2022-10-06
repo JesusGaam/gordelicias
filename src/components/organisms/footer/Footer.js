@@ -14,8 +14,8 @@ const Footer = () => {
           <div>
             <div className="subtitle">Contacto</div>
             <div>
-              <a href="mailto:contacto@gordelicias.com">
-                contacto@gordelicias.com
+              <a href="mailto:contacto@gordelicias.com.mx">
+                contacto@gordelicias.com.mx
               </a>
             </div>
             <div>
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
           <div>
             <div>
-              <a href="/aviso-de-privacidad.html">Aviso de privacidad</a>
+              <a href="aviso-de-privacidad.html">Aviso de privacidad</a>
             </div>
             <div>
               <a href="#terminos-y-condiciones">Términos y condiciones</a>
