@@ -29,13 +29,31 @@
       font-size: 70px;
     }
     @include media-sm-greater {
-      
       text-align: center;
     }
   }
-  .submit{
+  .submit {
     font-family: CutenesMonster;
     font-size: 30px;
     text-transform: uppercase;
+  }
+  .generic-error-form {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--color-danger);
+  }
+  .success-title {
+    margin-top: 60px;
+    font-family: RifficFree;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(148, 216, 211);
+    text-transform: uppercase;
+  }
+  .success-text {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
   }
 }

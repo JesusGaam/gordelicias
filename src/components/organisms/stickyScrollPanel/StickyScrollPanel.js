@@ -49,10 +49,7 @@ const StickyScrollPanel = ({
       widthPanel == panel.style.width.replace("px", "") &&
       heightPanel !== panel.style.height.replace("px", "")
     ) {
-      console.log("actualizado");
       return false;
-    } else {
-      console.log("nelson");
     }
 
     scrollPanel.current.style.height =

@@ -41,7 +41,7 @@ const Select = ({ options, handleValue = (_value, _init) => {} }) => {
       }
     }
     setValue(optionList[selectedKey].label);
-    handleValue(optionList[selectedKey].label, true);
+    handleValue(optionList[selectedKey].id, true);
   
   }, []);
 

@@ -5,7 +5,7 @@ const usePlaticaNosotros = () => {
   const [subject, setSubject] = useState({
     error: false,
     label: "Selecciona un tema de interés",
-    value: 0,
+    value: "",
     required: true,
     optionList: [
       { label: "Información general", id: "INFO", selected: true },
@@ -93,12 +93,10 @@ const usePlaticaNosotros = () => {
     });
 
     setCategory({ ...category, show: value === "QUEJA" });
+
+    return error;
   };
 
-  /**
-   *
-   * @param {*} value
-   */
   const handleName = (value) => {
     var error = name.required && value.length == 0;
     const helper = error ? "Este campo es obligatorio" : name.defaultHelper;
@@ -109,6 +107,8 @@ const usePlaticaNosotros = () => {
       error,
       helper,
     });
+
+    return error;
   };
 
   const handleEmail = (value) => {
@@ -129,6 +129,8 @@ const usePlaticaNosotros = () => {
       error,
       helper,
     });
+
+    return error;
   };
 
   const handlePhone = (value) => {
@@ -149,18 +151,21 @@ const usePlaticaNosotros = () => {
       error,
       helper,
     });
+
+    return error;
   };
 
   const handleCategory = (value) => {
-    const error = name.required && subject.value === "QUEJA" && value == 0;
-    const helper = error ? "Este campo es obligatorio" : name.defaultHelper;
-
+    const error = subject.value === "QUEJA" && value == 0;
+    const helper = error ? "Este campo es obligatorio" : subject.defaultHelper;
     setCategory({
       ...category,
       value,
       error,
       helper,
     });
+
+    return error;
   };
 
   const handleMessage = (value) => {
@@ -173,31 +178,100 @@ const usePlaticaNosotros = () => {
       error,
       helper,
     });
+
+    return error;
   };
 
-  const handleSubmit = () => {
-    handleSubject(subject.value);
-    handleName(name.value);
-    handleEmail(email.value);
-    handleCategory(category.value);
-    handleMessage(message.value);
+  const [formStatus, setFormStatus] = useState(0);
+
+  const handleSubmit = async () => {
+    const subjectError = handleSubject(subject.value);
+    const nameError = handleName(name.value);
+    const emailError = handleEmail(email.value);
+    const phoneError = handlePhone(phone.value);
+    const categoryError = handleCategory(category.value);
+    const messageError = handleMessage(message.value);
 
     if (
-      !subject.error &&
-      !name.error &&
-      !email.error &&
-      !category.error &&
-      !message.error
+      !subjectError &&
+      !nameError &&
+      !emailError &&
+      !phoneError &&
+      !categoryError &&
+      !messageError
     ) {
-      console.log("submit :D");
-      console.log({
+      const data = {
         subject: subject.value,
         name: name.value,
         email: email.value,
+        phone: phone.value,
         category: category.value,
         message: message.value,
-      });
+      };
+      const response = await submitHubspotForm(data);
+
+      setFormStatus(response?.ok ? 1 : 2);
     }
+  };
+
+  const submitHubspotForm = async ({
+    subject,
+    name,
+    email,
+    phone,
+    category,
+    message,
+  }) => {
+    let response;
+    const body = {
+      fields: [
+        {
+          name: "email",
+          value: email,
+        },
+        {
+          name: "firstname",
+          value: name,
+        },
+        {
+          name: "mobilephone",
+          value: phone,
+        },
+        {
+          name: "tema_interes",
+          value: subject,
+        },
+        {
+          name: "tema_interes_categoria",
+          value: category,
+        },
+        {
+          name: "tema_interes_mensaje",
+          value: message,
+        },
+      ],
+      context: {
+        pageUri: window.location.href,
+        pageName: document.title,
+      },
+    };
+
+    try {
+      response = await fetch(
+        `${process.env.HBS_FORM_ENDPOINT}/${process.env.HBS_PORTAL_ID}/${process.env.HBS_CONTACT_FORM_ID}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(body),
+        }
+      );
+    } catch (error) {
+      console.log("Error de petición:", error);
+    }
+    return response;
   };
 
   return {
@@ -207,6 +281,7 @@ const usePlaticaNosotros = () => {
     phone,
     category,
     message,
+    formStatus,
     handleSubject,
     handleName,
     handleEmail,
