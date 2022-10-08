@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { isEmail } from "@/utils/Utilities";
 
-const usePlaticaNosotros = () => {
+const useContactaNosotros = () => {
   const [subject, setSubject] = useState({
     error: false,
     label: "Selecciona un tema de interés",
@@ -292,4 +292,4 @@ const usePlaticaNosotros = () => {
   };
 };
 
-export default usePlaticaNosotros;
+export default useContactaNosotros;

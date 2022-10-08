@@ -4,9 +4,17 @@
   > div {
     max-width: 900px !important;
   }
+  .title{
+    font-family: RifficFree;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #7ADBD4;
+  text-transform: uppercase;
+  }
   .form {
     max-width: 500px !important;
-    margin: 40px auto 0 auto;
+    margin: 20px auto 0 auto;
 
     .text-form {
       margin: 50px 0;
@@ -48,7 +56,7 @@
     font-size: 24px;
     text-align: center;
     font-weight: bold;
-    color: rgb(148, 216, 211);
+    color: #7ADBD4;
     text-transform: uppercase;
   }
   .success-text {
