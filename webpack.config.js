@@ -32,7 +32,7 @@ const getEnvType = (env) => {
 module.exports = (env) => ({
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js",
+    filename: "assets/js/[name].bundle.js",
     clean: true,
   },
   devServer: {
@@ -121,14 +121,14 @@ module.exports = (env) => ({
   plugins: [
     new webpack.DefinePlugin(getEnvKeys(env)),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "assets/css/[name].css",
     }),
     new CopyPlugin({
       patterns: [
         { from: "public/manifest.json" },
         { from: "public/browserconfig.xml" },
         { from: "src/assets/favicon", to: "assets/favicon" },
-        { from: "src/assets/joterias", to: "js/joterias" },
+        { from: "src/assets/joterias", to: "assets/js/joterias" },
       ],
     }),
   ].concat(
