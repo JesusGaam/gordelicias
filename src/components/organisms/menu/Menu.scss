@@ -1,9 +1,22 @@
 @import "../../../styles/abstracts/all.scss";
 
 .menu {
-  .grid-title {
-    margin-bottom: 20px;
+  .menu-title{
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 370px;
+
+    @include media-sm {
+      max-width: 200px;
+    }
+    @include media-md {
+      max-width: 280px;
+    }
+    @include media-md {
+      max-width: 310px;
+    }
   }
+
   img {
     display: block;
     margin: 0 auto;

@@ -116,7 +116,7 @@ module.exports = (env) => ({
           },
       },
       extractComments: false,
-  })],
+    })],
   },
   plugins: [
     new webpack.DefinePlugin(getEnvKeys(env)),

@@ -7,9 +7,9 @@ import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
 import promo1Img from "img/promo-3x49.jpg";
-import paquete3Img from "img/paquete-3.jpg";
-import paquete6Img from "img/paquete-6.jpg";
-import paquete10Img from "img/paquete-10.jpg";
+import paquete3Img from "img/paquete-3.png";
+import paquete6Img from "img/paquete-6.png";
+import paquete10Img from "img/paquete-10.png";
 import horariosImg from "img/promo-horario-servicio.jpg";
 
 const Promos = () => {
