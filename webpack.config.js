@@ -128,7 +128,7 @@ module.exports = (env) => ({
         { from: "public/manifest.json" },
         { from: "public/browserconfig.xml" },
         { from: "src/assets/favicon", to: "assets/favicon" },
-        { from: "src/assets/joterias", to: "assets/js/joterias" },
+        { from: "src/assets/joterias", to: "assets/joterias" },
       ],
     }),
   ].concat(

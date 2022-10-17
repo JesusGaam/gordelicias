@@ -12,6 +12,8 @@ import Encuentranos from "@/components/organisms/encuentranos/Encuentranos";
 import Horarios from "@/components/organisms/horarios/Horarios";
 import Footer from "@/components/organisms/footer/Footer";
 import Contacta from "@/components/organisms/contactaNosotros/ContactaNosotros";
+import OrdenaAquiModal from "@/components/organisms/ordenaAquiModal/OrdenaAquiModal";
+
 import "./Home.css";
 
 const Home = () => {
@@ -30,6 +32,7 @@ const Home = () => {
       <Horarios />
       <Contacta />
       <Footer />
+      <OrdenaAquiModal />
     </>
   );
 };
