@@ -2,21 +2,23 @@ import { useState } from "react";
 import { isEmail } from "@/utils/Utilities";
 
 const useContactaNosotros = () => {
-  const [subject, setSubject] = useState({
-    error: false,
-    label: "Selecciona un tema de interés",
-    value: "",
-    required: true,
-    optionList: [
-      { label: "Información general", id: "INFO", selected: true },
-      { label: "Tengo una queja", id: "QUEJA" },
-    ],
-  });
+  const [formStatus, setFormStatus] = useState(0);
 
   const [name, setName] = useState({
     error: false,
     required: true,
-    label: "Nombre completo",
+    label: "Tu nombre",
+    value: "",
+    defaultValue: "",
+    placeholder: "",
+    helper: "",
+    defaultHelper: "",
+  });
+
+  const [lastName, setLastName] = useState({
+    error: false,
+    required: false,
+    label: "Tu apellido",
     value: "",
     defaultValue: "",
     placeholder: "",
@@ -35,34 +37,15 @@ const useContactaNosotros = () => {
     defaultHelper: "",
   });
 
-  const [phone, setPhone] = useState({
+  const [subject, setSubject] = useState({
     error: false,
-    required: false,
-    label: "Número de teléfono",
-    value: "",
-  });
-
-  const [category, setCategory] = useState({
-    error: true,
-    label: "Selecciona una categoría",
-    value: "",
     required: true,
-    show: false,
-    optionList: [
-      { label: "Selecciona una categoría", id: 0, selected: true },
-      { label: "Calidad", id: "CALIDAD" },
-      { label: "Servicio", id: "SERVICIO" },
-      { label: "Limpieza", id: "LIMPIEZA" },
-      { label: "Ordenes", id: "ORDENES" },
-      { label: "Delivery", id: "DELIVERY" },
-      { label: "Bebida", id: "BEBIDA" },
-      { label: "Otros", id: "OTROS" },
-      { label: "Licencias", id: "LICENCIAS" },
-      { label: "Facturación", id: "FACTURACION" },
-      { label: "Patrocinio", id: "PATROCINIO" },
-      { label: "Compras", id: "COMPRAS" },
-      { label: "Otro", id: "OTRO" },
-    ],
+    label: "Asunto",
+    value: "",
+    defaultValue: "",
+    placeholder: "",
+    helper: "",
+    defaultHelper: "",
   });
 
   const [message, setMessage] = useState({
@@ -74,28 +57,32 @@ const useContactaNosotros = () => {
     defaultHelper: "",
   });
 
-  const handleSubject = (value, initHandle) => {
-    let error = false;
-    let helper = subject.defaultHelper;
+  const [personalDataNotice, setPersonalDataNotice] = useState({
+    error: true,
+    label: "",
+    required: false,
+    value: [],
+    optionList: [
+      {
+        label:
+          "Autorizo el uso de mis datos para el envío de comunicaciones comerciales relacionadas con el responsable  a través de e-mail y/o sms.",
+        id: 1,
+      },
+    ],
+  });
 
-    if (!initHandle) {
-      error = category.required && value == 0;
-      if (error) {
-        helper = "Este campo es obligatorio";
-      }
-    }
-
-    setSubject({
-      ...subject,
-      value,
-      error,
-      helper,
-    });
-
-    setCategory({ ...category, show: value === "QUEJA" });
-
-    return error;
-  };
+  const [privacyNotice, setPrivacyNotice] = useState({
+    error: true,
+    label: "",
+    required: true,
+    value: [],
+    optionList: [
+      {
+        label: "He leído y acepto la política de privacidad.",
+        id: 1,
+      },
+    ],
+  });
 
   const handleName = (value) => {
     var error = name.required && value.length == 0;
@@ -109,6 +96,13 @@ const useContactaNosotros = () => {
     });
 
     return error;
+  };
+
+  const handleLastName = (value) => {
+    setLastName({
+      ...lastName,
+      value
+    });
   };
 
   const handleEmail = (value) => {
@@ -133,33 +127,12 @@ const useContactaNosotros = () => {
     return error;
   };
 
-  const handlePhone = (value) => {
-    var error = false;
-    var helper = "";
-
-    if (phone.required && value.length == 0) {
-      error = true;
-      helper = "Este campo es obligatorio";
-    } else if (value.length > 0 && value.length !== 10) {
-      error = true;
-      helper = "Introduce diez dígitos";
-    }
-
-    setPhone({
-      ...phone,
-      value,
-      error,
-      helper,
-    });
-
-    return error;
-  };
-
-  const handleCategory = (value) => {
-    const error = subject.value === "QUEJA" && value == 0;
+  const handleSubject = (value) => {
+    var error = subject.required && value.length == 0;
     const helper = error ? "Este campo es obligatorio" : subject.defaultHelper;
-    setCategory({
-      ...category,
+
+    setSubject({
+      ...subject,
       value,
       error,
       helper,
@@ -182,72 +155,96 @@ const useContactaNosotros = () => {
     return error;
   };
 
-  const [formStatus, setFormStatus] = useState(0);
+  const handlePersonalDataNotice = (value) => {
+    setPersonalDataNotice({
+      ...personalDataNotice,
+      value,
+    });
+  };
+
+  const handlePrivacyNotice = (value) => {
+    var error = privacyNotice.required && value.length == 0;
+    const helper = error
+      ? "Este campo es obligatorio"
+      : privacyNotice.defaultHelper;
+
+    setPrivacyNotice({
+      ...privacyNotice,
+      value,
+      error,
+      helper,
+    });
+
+    return error;
+  };
 
   const handleSubmit = async () => {
     const subjectError = handleSubject(subject.value);
     const nameError = handleName(name.value);
     const emailError = handleEmail(email.value);
-    const phoneError = handlePhone(phone.value);
-    const categoryError = handleCategory(category.value);
     const messageError = handleMessage(message.value);
+    const privacyNoticeError = handlePrivacyNotice(privacyNotice.value);
 
     if (
       !subjectError &&
       !nameError &&
       !emailError &&
-      !phoneError &&
-      !categoryError &&
-      !messageError
+      !messageError &&
+      !privacyNoticeError
     ) {
-      const data = {
-        subject: subject.value,
+      const response = await submitHubspotForm({
         name: name.value,
+        lastname: lastName.value,
         email: email.value,
-        phone: phone.value,
-        category: category.value,
+        subject: subject.value,
         message: message.value,
-      };
-      const response = await submitHubspotForm(data);
+        personalDataNotice: personalDataNotice.value.length > 0,
+        privacyNotice: privacyNotice.value.length > 0,
+      });
 
       setFormStatus(response?.ok ? 1 : 2);
     }
   };
 
   const submitHubspotForm = async ({
-    subject,
     name,
+    lastname,
     email,
-    phone,
-    category,
+    subject,
     message,
+    personalDataNotice,
+    privacyNotice,
   }) => {
     let response;
     const body = {
       fields: [
         {
-          name: "email",
-          value: email,
-        },
-        {
           name: "firstname",
           value: name,
         },
         {
-          name: "mobilephone",
-          value: phone,
+          name: "lastname",
+          value: lastname,
         },
         {
-          name: "tema_interes",
+          name: "email",
+          value: email,
+        },
+        {
+          name: "asunto",
           value: subject,
         },
         {
-          name: "tema_interes_categoria",
-          value: category,
+          name: "tema",
+          value: message,
         },
         {
-          name: "tema_interes_mensaje",
-          value: message,
+          name: "autorizacion_datos_personales",
+          value: personalDataNotice,
+        },
+        {
+          name: "autorizacion_aviso_privacidad",
+          value: privacyNotice,
         },
       ],
       context: {
@@ -275,19 +272,21 @@ const useContactaNosotros = () => {
   };
 
   return {
-    subject,
     name,
+    lastName,
     email,
-    phone,
-    category,
+    subject,
     message,
+    personalDataNotice,
+    privacyNotice,
     formStatus,
-    handleSubject,
     handleName,
+    handleLastName,
+    handleSubject,
     handleEmail,
-    handlePhone,
-    handleCategory,
     handleMessage,
+    handlePersonalDataNotice,
+    handlePrivacyNotice,
     handleSubmit,
   };
 };

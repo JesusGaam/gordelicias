@@ -2,27 +2,28 @@ import React from "react";
 import "./ContactaNosotros.scss";
 import TextInput from "@/components/molecules/form/textField/TextField";
 import EmailField from "@/components/molecules/form/emailField/EmailField";
-import PhoneField from "@/components/molecules/form/phoneField/PhoneField";
 import TextArea from "@/components/molecules/form/textArea/TextArea";
-import Select from "@/components/molecules/form/select/Select";
 import Button from "@/components/molecules/form/button/Button";
 import useContactaNosotros from "@/hooks/useContactaNosotros";
+import Checkbox from "@/components/molecules/form/checkbox/Checkbox";
 
 const ContactaNosotros = () => {
   const {
-    subject,
     name,
+    lastName,
     email,
-    phone,
-    category,
+    subject,
     message,
+    personalDataNotice,
+    privacyNotice,
     formStatus,
     handleSubject,
     handleName,
+    handleLastName,
     handleEmail,
-    handlePhone,
-    handleCategory,
     handleMessage,
+    handlePersonalDataNotice,
+    handlePrivacyNotice,
     handleSubmit,
   } = useContactaNosotros();
   return (
@@ -35,15 +36,14 @@ const ContactaNosotros = () => {
               <p>En Gordelicias queremos saber de ti.</p>
               <p>Favor de llenar el formulario siguiente.</p>
             </div>
-            <Select options={subject} handleValue={handleSubject} />
             <TextInput options={name} handleValue={handleName} />
+            <TextInput options={lastName} handleValue={handleLastName} />
             <EmailField options={email} handleValue={handleEmail} />
-            <PhoneField options={phone} handleValue={handlePhone} />
-
-            {category.show && (
-              <Select options={category} handleValue={handleCategory} />
-            )}
+            <TextInput options={subject} handleValue={handleSubject} />
             <TextArea options={message} handleValue={handleMessage} />
+            <Checkbox options={personalDataNotice} handleValue={handlePersonalDataNotice} />
+            <Checkbox options={privacyNotice} handleValue={handlePrivacyNotice} />
+
             <Button
               className="submit"
               options={{
