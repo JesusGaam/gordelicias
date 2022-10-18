@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style.scss";
+import "./DesignSystem.scss";
 
 import ButtonInput from "@/components/molecules/form/button/Button";
 import TextField from "@/components/molecules/form/textField/TextField";
