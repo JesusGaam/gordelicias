@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nosotros.scss";
-import nelaFotos from "img/nela-fotos.png";
+import nelaFotos from "img/nela-fotos-gorditas.png";
 
 const Nosotros = () => {
   return (

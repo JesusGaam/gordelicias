@@ -6,6 +6,8 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
+
+import diaMuertosImg from "img/dia-de-muertos.jpg";
 import promo1Img from "img/promo-3x49.jpg";
 import paquete3Img from "img/paquete-3.png";
 import paquete6Img from "img/paquete-6.png";
@@ -21,6 +23,9 @@ const Promos = () => {
       interval={3000}
       bullets={false}
     >
+      <div className="carousel-item">
+        <img className="background" src={diaMuertosImg} />
+      </div>
       <div className="carousel-item">
         {/* <img className="principal" src={promo1Img} /> */}
         <img className="background" src={promo1Img} />

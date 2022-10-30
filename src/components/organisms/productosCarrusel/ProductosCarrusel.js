@@ -9,6 +9,7 @@ import "./ProductosCarrusel.scss";
 import LeftArrow from "img/left-arrow.svg";
 import RightArrow from "img/right-arrow.svg";
 
+import platillo1 from "img/carrusel-gorditas-taza.png";
 import platillo3 from "img/carrusel-birria-nopales-picadillo.png";
 import platillo4 from "img/carrusel-favoritas.png";
 import platillo5 from "img/carrusel-res-birria-rajas.png";
@@ -25,6 +26,9 @@ const ProductosCarrusel = () => {
       buttonContentRight={<RightArrow width="80px" />}
       bullets={false}
     >
+      <div className="carousel-item">
+        <img className="principal" src={platillo1} />
+      </div>
       <div className="carousel-item">
         <img className="principal" src={platillo3} />
       </div>
