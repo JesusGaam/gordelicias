@@ -3,14 +3,18 @@ import "./Menu.scss";
 import MenuImg from "img/menu.jpg";
 import PideLineaImg from "img/pide-linea.svg";
 import NelaCompuImg from "img/nela-compu.svg";
-import pdfMenu from "../../../assets/gordelicias-menu.pdf";
+import pdfMenuBoulevard from "../../../assets/gordelicias-menu-boulevard.pdf";
+import pdfMenuMercado from "../../../assets/gordelicias-menu-mercado.pdf";
+
+
+
 import MenuTitle from "img/menu-title.svg";
 
 const Menu = () => {
   return (
     <section className="container menu" id="carta">
       <div>
-        <MenuTitle className="menu-title"/>
+        <MenuTitle className="menu-title" />
         <img src={MenuImg} />
         <div className="grid">
           <div>
@@ -19,18 +23,22 @@ const Menu = () => {
           <div>
             <div>
               <PideLineaImg />
-              <div className="link-container desktop">
-                <a href={pdfMenu} target="_blank">
-                  Descarga el menú en PDF
-                </a>
-              </div>
             </div>
           </div>
         </div>
-        <div className="link-container mobile">
-          <a href={pdfMenu} target="_blank">
-            Descarga el menú en PDF
-          </a>
+        <div className="link-container">
+          <div>
+            <div className="sucursal">Boulevard</div>
+            <a href={pdfMenuBoulevard} target="_blank">
+              Descarga el menú
+            </a>
+          </div>
+          <div>
+            <div className="sucursal">Mercado Tlaquepaque</div>
+            <a href={pdfMenuMercado} target="_blank">
+              Descarga el menú
+            </a>
+          </div>
         </div>
       </div>
     </section>

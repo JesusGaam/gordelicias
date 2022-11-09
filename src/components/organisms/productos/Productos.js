@@ -1,9 +1,9 @@
 import React from "react";
 import "./Productos.scss";
 import Star from "img/star.svg";
-import CirculoVerde from "img/circulo-verde.png";
-import CirculoRosa from "img/circulo-rosa.png";
-import CirculoNaranja from "img/circulo-naranja.png";
+import CirculoVerde from "img/circulo-verde.png?001";
+import CirculoRosa from "img/circulo-rosa.png?001";
+import CirculoNaranja from "img/circulo-naranja.png?001";
 
 const Productos = () => {
   return (
@@ -28,12 +28,16 @@ const Productos = () => {
           <div>
             <div className="scritp-text shadow-orange">Comida</div>
             <p>
-              Contamos con guisos muy ricos para nuestras gorditas, puedes
-              combinarlos o comerlos solos.
+              Servimos las gorditas más ricas con los mejores guisos, siempre
+              con ingredientes de la mejor calidad, para saciar el antojo de
+              hasta el más indeciso.
             </p>
           </div>
           <div className="images ">
-            <img src={CirculoVerde} className="circle fade-in-right-effect delay-200" />
+            <img
+              src={CirculoVerde}
+              className="circle fade-in-right-effect delay-200"
+            />
           </div>
         </div>
       </section>
@@ -43,12 +47,16 @@ const Productos = () => {
           <div>
             <div className="scritp-text shadow-orange">Bebidas</div>
             <p>
-              Tenemos gran variedad de bebidas, son frescas y cálidas, hechas al
-              día, tenemos la bebida perfecta para acompañar tus gorditas.
+              Para bajar el bocado siempre es bueno un café, agua fresca o
+              champurrado y si quieres matar la sed, un refresco o cerveza puede
+              ser.
             </p>
           </div>
           <div className="images">
-            <img src={CirculoRosa} className="circle fade-in-left-effect delay-200" />
+            <img
+              src={CirculoRosa}
+              className="circle fade-in-left-effect delay-200"
+            />
           </div>
         </div>
       </section>
@@ -58,12 +66,15 @@ const Productos = () => {
           <div>
             <div className="scritp-text shadow-orange">Postres</div>
             <p>
-              Exquisitos para darle un sabor que hace que tu día sea
-              auténticamente delicioso y dulce.
+              Que dulce es comer rico así que, para finalizar una galleta, pay
+              de elote o flan puedes ordenar.
             </p>
           </div>
           <div className="images">
-            <img src={CirculoNaranja} className="circle fade-in-right-effect delay-200" />
+            <img
+              src={CirculoNaranja}
+              className="circle fade-in-right-effect delay-200"
+            />
           </div>
         </div>
       </section>

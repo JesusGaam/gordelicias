@@ -9,13 +9,15 @@ const Nosotros = () => {
         <div className="grid">
           <div>
             <div>
-            <div className="scritp-text shadow-orange">Nosotros</div>
+              <div className="scritp-text shadow-orange">Nosotros</div>
               <p>
-                Gorditas rellenas de tradición, hechas a mano desde 1977. En
-                Gordelicias queremos proporcionar gorditas nutricionalmente
-                sanas, accesibles, con una preparación rápida y artesanal, que
-                reviva, continúe la tradición y la cultura mexicana, a través de
-                su muy delicioso razón.
+                Somos quien te ha quitado el antojo y saciado tu hambre desde
+                1977, somos la tradición, la sazón y el sabor a México, somos
+                quien te ha acompañado durante todos estos años en esas charlas
+                de cafés con amigos en días de lluvia y esos champurrados
+                calientitos en mañanas frías, somos los que te sirven
+                calientitas las tradicionales gorditas rellenas, somos las
+                auténticas gorditas de Tlaquepaque.
               </p>
             </div>
           </div>

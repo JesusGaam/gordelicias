@@ -44,11 +44,10 @@ const Ingredientes = () => {
             Ingredientes de calidad
           </div>
           <p>
-            Cada guiso tiene un rico y muy original sabor, son deliciosas y
-            calientitas, ven y disfrutalas, de Lunes a Domingo.
-          </p>
-          <p>
-            !Siguenos en nuestras redes sociales y ven a gordear con nosotros!
+            Siempre buscamos que nuestros guisos a parte de ricos sean
+            nutritivos, por eso seleccionamos cuidadosamente casa uno de
+            nuestros ingredientes para darte una mejor calidad de alimentos y
+            con esto un mejor servicio.
           </p>
         </div>
         <img className="gordita" src={GorditaAbiertaImg} style={gorditaStyle} />
@@ -69,7 +68,7 @@ const Ingredientes = () => {
             <img src={ChileVerde} className="chileVerde" style={rotateRight} />
             <img src={Jitomate1} className="jitomate1" style={rotateLeft} />
             <img src={Jitomate2} className="jitomate2" style={rotateRight} />
-            <img src={Papa1} className="papa1" style={rotateLeft}/>
+            <img src={Papa1} className="papa1" style={rotateLeft} />
           </div>
         </div>
       </ScrollPanel>
