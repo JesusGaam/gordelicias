@@ -2,21 +2,10 @@
 
 .schedules {
   .title {
-    font-family: RifficFree;
-    font-size: 50px;
+    margin-bottom: 60px;
     text-align: center;
-    font-weight: bold;
-    color: #7adbd4;
-    text-transform: uppercase;
-
-    @include media-lg {
-      font-size: 40px;
-    }
-    @include media-md {
-      font-size: 30px;
-    }
-    @include media-sm {
-      font-size: 24px;
+    svg {
+      height: 50px;
     }
   }
 
@@ -27,8 +16,9 @@
     max-width: 800px;
     margin: 40px auto 0 auto;
 
-    @include media-sm {
+    @include media-lg-less {
       grid-template-columns: auto;
+      grid-gap: 60px;
     }
 
     > div {
@@ -42,7 +32,9 @@
     }
   }
   .subtitle {
-    color: rgb(252, 217, 57);
+    svg {
+      height: 20px;
+    }
   }
   p {
     color: #fff;

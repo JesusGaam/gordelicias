@@ -1,0 +1,32 @@
+@import "../../../styles/abstracts/all.scss";
+.our-history {
+  padding-top: 120px !important;
+  padding-bottom: 80px !important;
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 80px;
+    margin-top: 60px;
+
+    @include media-md-less {
+      grid-template-columns: auto;
+      grid-gap: 40px;
+    }
+  }
+  .scritp-text {
+    
+  }
+  p {
+    color: #fff;
+    font-weight: 300;
+
+    @include media-md-greater {
+      font-size: 24px;
+    }
+
+    @include media-md {
+      font-size: 22px;
+    }
+  }
+}

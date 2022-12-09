@@ -7,11 +7,11 @@ import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
 
-import diaMuertosImg from "img/dia-de-muertos.jpg";
+import diaMuertosImg from "img/carrusel-tienda-online.jpg"; // Borrar
 import promo1Img from "img/promo-3x49.jpg";
-import paquete3Img from "img/paquete-3.png";
-import paquete6Img from "img/paquete-6.png";
-import paquete10Img from "img/paquete-10.png";
+import paquete3Img from "img/carrusel-giveaway.jpg"; // Borrar
+import paquete6Img from "img/carrusel-paquetes.jpg"; // Borrar
+import paquete10Img from "img/carrusel-precio-especial.jpg"; // Borrar
 import horariosImg from "img/promo-horario-servicio.jpg";
 
 const Promos = () => {

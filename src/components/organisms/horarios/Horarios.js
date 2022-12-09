@@ -1,14 +1,18 @@
 import React from "react";
 import "./Horarios.scss";
 
+import PalabraHorarios from "img/palabra-horarios.svg"
+import PalabraBoulevard from "img/palabra-boulevard.svg"
+import PalabraMercadoTlaque from "img/palabra-mercado-tlaque.svg"
+
 const Horarios = () => {
   return (
     <section className="container schedules" id="horario">
       <div>
-        <div className="title">Horarios</div>
+        <div className="title"><PalabraHorarios/></div>
         <div className="grid">
           <div>
-            <div className="subtitle">Boulevard</div>
+            <div className="subtitle"><PalabraBoulevard/> </div>
             <p>Lunes a Domingo</p>
             <p>8:00 - 22:00 hrs.</p>
             <div className="link-container">
@@ -22,7 +26,7 @@ const Horarios = () => {
             </div>
           </div>
           <div>
-            <div className="subtitle">Mercado Tlaquepaque</div>
+            <div className="subtitle"><PalabraMercadoTlaque/> </div>
             <p>Lunes a Domingo</p>
             <p>8:00 - 14:00 hrs.</p>
             <div className="link-container">
