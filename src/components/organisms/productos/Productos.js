@@ -27,11 +27,7 @@ const Productos = () => {
         <div>
           <div>
             <div className="scritp-text shadow-orange">Comida</div>
-            <p>
-              Servimos las gorditas más ricas con los mejores guisos, siempre
-              con ingredientes de la mejor calidad, para saciar el antojo de
-              hasta el más indeciso.
-            </p>
+            
           </div>
           <div className="images ">
             <img
@@ -46,11 +42,7 @@ const Productos = () => {
         <div>
           <div>
             <div className="scritp-text shadow-orange">Bebidas</div>
-            <p>
-              Para bajar el bocado siempre es bueno un café, agua fresca o
-              champurrado y si quieres matar la sed, un refresco o cerveza puede
-              ser.
-            </p>
+           
           </div>
           <div className="images">
             <img
@@ -65,10 +57,7 @@ const Productos = () => {
         <div>
           <div>
             <div className="scritp-text shadow-orange">Postres</div>
-            <p>
-              Que dulce es comer rico así que, para finalizar una galleta, pay
-              de elote o flan puedes ordenar.
-            </p>
+            
           </div>
           <div className="images">
             <img

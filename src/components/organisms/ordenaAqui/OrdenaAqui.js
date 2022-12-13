@@ -43,7 +43,7 @@ const OrdenaAqui = () => {
   return (
     <>
       <div className="container order-here">
-        <StickyScrollPanel onScrollProcess={onScrollProcess} height={"150vh"}>
+        <StickyScrollPanel onScrollProcess={onScrollProcess} height={"100vh"}>
           <PensandoGordear className="gordear-text" />
           <MotoNelaAnimation nelaAnimation={nelaAnimation} reverse={reverse} />
         </StickyScrollPanel>
