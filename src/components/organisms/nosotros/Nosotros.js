@@ -15,9 +15,8 @@ const Nosotros = () => {
                 1977, somos la tradición, la sazón y el sabor a México, somos
                 quien te ha acompañado durante todos estos años en esas charlas
                 de cafés con amigos en días de lluvia y esos champurrados
-                calientitos en mañanas frías, somos los que te sirven
-                calientitas las tradicionales gorditas rellenas, somos las
-                auténticas gorditas de Tlaquepaque.
+                calientitos en mañanas frías, somos las autenticas gorditas de
+                Tlaquepaque.
               </p>
             </div>
           </div>

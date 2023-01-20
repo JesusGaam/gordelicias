@@ -9,14 +9,12 @@ import "./ProductosCarrusel.scss";
 import LeftArrow from "img/left-arrow.svg";
 import RightArrow from "img/right-arrow.svg";
 
-import gorditas1 from "img/carrusel-gorditas-1.png";
-import gorditas2 from "img/carrusel-gorditas-2.png";
-import gorditas3 from "img/carrusel-gorditas-3.png";
-import platillo1 from "img/carrusel-gorditas-taza.png";
-import platillo3 from "img/carrusel-birria-nopales-picadillo.png";
-import platillo4 from "img/carrusel-favoritas.png";
-import platillo5 from "img/carrusel-burro-chicharron.png";
-import platillo6 from "img/carrusel-res-birria-rajas.png";
+import carousel1 from "img/carousel-1.png";
+import carousel2 from "img/carousel-2.png";
+import carousel3 from "img/carousel-3.png";
+import carousel4 from "img/carousel-gorditas-1.png";
+import carousel5 from "img/carousel-gorditas-2.png";
+import carousel6 from "img/carousel-gorditas-3.png";
 
 const ProductosCarrusel = () => {
   return (
@@ -31,28 +29,22 @@ const ProductosCarrusel = () => {
       bullets={false}
     >
       <div className="carousel-item">
-        <img className="principal" src={gorditas1} />
+        <img className="principal" src={carousel1} />
       </div>
       <div className="carousel-item">
-        <img className="principal" src={gorditas2} />
+        <img className="principal" src={carousel2} />
       </div>
       <div className="carousel-item">
-        <img className="principal" src={gorditas3} />
+        <img className="principal" src={carousel3} />
       </div>
       <div className="carousel-item">
-        <img className="principal" src={platillo1} />
+        <img className="principal" src={carousel4} />
       </div>
       <div className="carousel-item">
-        <img className="principal" src={platillo3} />
+        <img className="principal" src={carousel5} />
       </div>
       <div className="carousel-item">
-        <img className="principal" src={platillo4} />
-      </div>
-      <div className="carousel-item">
-        <img className="principal" src={platillo5} />
-      </div>
-      <div className="carousel-item">
-        <img className="principal" src={platillo6} />
+        <img className="principal" src={carousel6} />
       </div>
     </AutoplaySlider>
   );
