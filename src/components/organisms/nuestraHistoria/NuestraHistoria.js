@@ -29,7 +29,7 @@ const NuestraHistoria = () => {
               aventura que emprendía un ama de casa mexicana sería una deliciosa
               herencia, no solo para su familia si no para cualquier comensal
               hambriento que pruebe las famosas y originales gorditas de
-              Tlaquepaque a las que hoy en día llamamos con cariño Gordelicias.
+              Tlaquepaque a las que hoy en día llamamos con cariño  <span className="gordelicias-font">Gordelicias</span>.
             </p>
           </div>
         </div>

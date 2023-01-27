@@ -11,7 +11,7 @@ const AvisoPrivacidad = () => {
         <div>
           <div className="title">Aviso de privacidad integral</div>
           <p>
-            Gordelicias, con domicilio en Blvd. Gral. Marcelino García Barragán,
+          <span className="gordelicias-font">Gordelicias</span>, con domicilio en Blvd. Gral. Marcelino García Barragán,
             1910, Atlas, Guadalajara, Jalisco, México. y portal de internet{" "}
             <a href="https://gordelicias.com.mx">https://gordelicias.com.mx</a>,
             es el responsable del uso y protección de sus datos personales, y al

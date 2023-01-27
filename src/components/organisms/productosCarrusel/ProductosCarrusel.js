@@ -9,12 +9,14 @@ import "./ProductosCarrusel.scss";
 import LeftArrow from "img/left-arrow.svg";
 import RightArrow from "img/right-arrow.svg";
 
-import carousel1 from "img/carousel-1.png";
-import carousel2 from "img/carousel-2.png";
-import carousel3 from "img/carousel-3.png";
-import carousel4 from "img/carousel-gorditas-1.png";
-import carousel5 from "img/carousel-gorditas-2.png";
-import carousel6 from "img/carousel-gorditas-3.png";
+import carousel1 from "img/carrusel-taza.png";
+import carousel2 from "img/carousel-1.png";
+import carousel3 from "img/carousel-2.png";
+import carousel4 from "img/carousel-3.png";
+import carousel5 from "img/carrusel-burrito.png";
+import carousel6 from "img/carousel-gorditas-1.png";
+import carousel7 from "img/carousel-gorditas-2.png";
+import carousel8 from "img/carousel-gorditas-3.png";
 
 const ProductosCarrusel = () => {
   return (
@@ -45,6 +47,12 @@ const ProductosCarrusel = () => {
       </div>
       <div className="carousel-item">
         <img className="principal" src={carousel6} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel7} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel8} />
       </div>
     </AutoplaySlider>
   );

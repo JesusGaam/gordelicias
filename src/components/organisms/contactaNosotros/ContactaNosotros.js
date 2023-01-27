@@ -33,7 +33,7 @@ const ContactaNosotros = () => {
         {[0, 2].indexOf(formStatus) >= 0 && (
           <div className="form">
             <div className="text-form">
-              <p>En <bold>Gordelicias</bold> queremos saber de ti.</p>
+              <p>En <font className="gordelicias-font">Gordelicias</font> queremos saber de ti.</p>
               <p>Favor de llenar el formulario siguiente.</p>
             </div>
             <TextInput options={name} handleValue={handleName} />
