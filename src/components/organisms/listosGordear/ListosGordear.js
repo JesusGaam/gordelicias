@@ -1,9 +1,11 @@
 import React from "react";
 import "./ListosGordear.scss";
-import ListoGordearImg from "img/listos-gordear.svg";
+import ListoGordearImg from "img/palabras/listos-para-gordiar.svg";
 import ListoGordearNelaImg from "img/listos-gordear-nela.svg";
 import YoutubePlayer from "@/components/molecules/youtubePlayer/YoutubePlayer";
 import YoutubeCoverImg from "img/youtube-video-cover.jpg";
+
+//listos-gordear.svg
 
 const ListosGordear = () => {
   return (

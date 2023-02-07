@@ -1,5 +1,17 @@
 @import "../../../styles/abstracts/all.scss";
 .about-us {
+  .title {
+    display: block;
+    margin-bottom: 30px;
+    max-width: 260px;
+
+    @include media-md-less {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 45% 55%;

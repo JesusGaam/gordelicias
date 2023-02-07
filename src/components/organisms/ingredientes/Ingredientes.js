@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Ingredientes.scss";
 import ScrollPanel from "../ScrollPanel/ScrollPanel";
-import IngredientesImg from "img/ingredientes.png";
+import IngredientesCalidadImg from "img/palabras/ingredientes-de-calidad.svg";
 import GorditaAbiertaImg from "img/gordita-abierta.png";
 
 import Carne1 from "img/carne-blur1.png";
@@ -40,9 +40,7 @@ const Ingredientes = () => {
     <section className="container ingredients-container">
       <ScrollPanel onScrollProcess={onScrollProcess}>
         <div className="text-container">
-          <div className="scritp-text orange shadow-white">
-            Ingredientes de calidad
-          </div>
+          <IngredientesCalidadImg />
           <p>
             Siempre buscamos que nuestros guisos a parte de ricos sean
             nutritivos, por eso seleccionamos cuidadosamente casa uno de

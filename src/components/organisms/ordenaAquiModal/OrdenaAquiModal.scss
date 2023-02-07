@@ -1,11 +1,10 @@
 @import "../../../styles/abstracts/all.scss";
 
-
 .modal-dialog .modal {
   background-image: url("img/gray-background.jpg");
   background-color: #111111;
   background-position: center top;
-  background-size: 100% auto;  
+  background-size: 100% auto;
 }
 
 .modal-order-here {
@@ -29,7 +28,7 @@
 
   .nela-container {
     right: calc(50% - 100px) !important;
-    
+
     @include media-sm-greater {
       top: 80px !important;
     }
@@ -48,8 +47,14 @@
     text-align: center;
 
     a {
+      display: inline-block;
       font-family: CutenesMonster;
       font-size: 30px;
+      color: #ffffff;
+      padding: 10px 20px;
+      margin-top: 30px;
+      border-radius: 16px;
+      background-color: var(--color-primary);
     }
   }
 }

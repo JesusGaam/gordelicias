@@ -6,11 +6,10 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
-
-import diaMuertosImg from "img/carrusel-tienda-online.jpg"; // Borrar
-import promo1Img from "img/promo-3x49.jpg";
-import paquete10Img from "img/carrusel-precio-especial.jpg"; // Borrar
-import horariosImg from "img/promo-horario-servicio.jpg";
+import imagen1 from "img/carruselPromos/carrusel-comadres.jpg";
+import imagen2 from "img/carruselPromos/promo-3x49.jpg";
+import imagen3 from "img/carruselPromos/carrusel-precio-especial.jpg"; // Borrar
+import imagen4 from "img/carruselPromos/promo-horario-servicio.jpg";
 
 const Promos = () => {
   return (
@@ -22,19 +21,16 @@ const Promos = () => {
       bullets={false}
     >
       <div className="carousel-item">
-        <img className="background" src={diaMuertosImg} />
+        <img className="background" src={imagen1} />
       </div>
       <div className="carousel-item">
-        {/* <img className="principal" src={promo1Img} /> */}
-        <img className="background" src={promo1Img} />
+        <img className="background" src={imagen2} />
       </div>
       <div className="carousel-item">
-        {/* <img className="principal" src={promo2Img} /> */}
-        <img className="background" src={paquete10Img} />
+        <img className="background" src={imagen3} />
       </div>
       <div className="carousel-item">
-        {/* <img className="principal" src={promo3Img} /> */}
-        <img className="background" src={horariosImg} />
+        <img className="background" src={imagen4} />
       </div>
     </AutoplaySlider>
   );

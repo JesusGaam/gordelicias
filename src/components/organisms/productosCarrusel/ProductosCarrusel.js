@@ -9,14 +9,26 @@ import "./ProductosCarrusel.scss";
 import LeftArrow from "img/left-arrow.svg";
 import RightArrow from "img/right-arrow.svg";
 
-import carousel1 from "img/carrusel-taza.png";
-import carousel2 from "img/carousel-1.png";
-import carousel3 from "img/carousel-2.png";
-import carousel4 from "img/carousel-3.png";
-import carousel5 from "img/carrusel-burrito.png";
-import carousel6 from "img/carousel-gorditas-1.png";
-import carousel7 from "img/carousel-gorditas-2.png";
-import carousel8 from "img/carousel-gorditas-3.png";
+import carousel1 from "img/carruselProductos/carrusel-taza.png";
+import carousel2 from "img/carruselProductos/carousel-1.png";
+import carousel3 from "img/carruselProductos/carousel-2.png";
+import carousel4 from "img/carruselProductos/carousel-3.png";
+import carousel5 from "img/carruselProductos/burro.png";
+
+import carousel6 from "img/carruselProductos/carrusel-burrito.png";
+import carousel7 from "img/carruselProductos/bistec-chicharron.png";
+import carousel8 from "img/carruselProductos/champinon-chorizo.png";
+import carousel9 from "img/carruselProductos/frijoles-rajas.png";
+import carousel10 from "img/carruselProductos/mole-nopales.png";
+import carousel11 from "img/carruselProductos/queso-picadillo.png";
+import carousel12 from "img/carruselProductos/tinga-birria.png";
+
+import carousel13 from "img/carruselProductos/comp1.png";
+import carousel14 from "img/carruselProductos/comp2.png";
+import carousel15 from "img/carruselProductos/comp3.png";
+import carousel16 from "img/carruselProductos/comp4.png";
+import carousel17 from "img/carruselProductos/comp5.png";
+import carousel18 from "img/carruselProductos/comp5.png";
 
 const ProductosCarrusel = () => {
   return (
@@ -53,6 +65,37 @@ const ProductosCarrusel = () => {
       </div>
       <div className="carousel-item">
         <img className="principal" src={carousel8} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel9} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel10} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel11} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel12} />
+      </div>
+
+      <div className="carousel-item">
+        <img className="principal" src={carousel13} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel14} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel15} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel16} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel17} />
+      </div>
+      <div className="carousel-item">
+        <img className="principal" src={carousel18} />
       </div>
     </AutoplaySlider>
   );

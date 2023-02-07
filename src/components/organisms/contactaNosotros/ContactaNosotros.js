@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactaNosotros.scss";
+import ContactaNosotrosImg from "img/palabras/contacta-con-nosotros.svg";
 import TextInput from "@/components/molecules/form/textField/TextField";
 import EmailField from "@/components/molecules/form/emailField/EmailField";
 import TextArea from "@/components/molecules/form/textArea/TextArea";
@@ -29,11 +30,16 @@ const ContactaNosotros = () => {
   return (
     <section className="container talk-with-us">
       <div>
-        <div className="title">CONTACTA CON NOSOTROS</div>
+        <div className="title">
+          <ContactaNosotrosImg />
+        </div>
         {[0, 2].indexOf(formStatus) >= 0 && (
           <div className="form">
             <div className="text-form">
-              <p>En <font className="gordelicias-font">Gordelicias</font> queremos saber de ti.</p>
+              <p>
+                En <font className="gordelicias-font">Gordelicias</font>{" "}
+                queremos saber de ti.
+              </p>
               <p>Favor de llenar el formulario siguiente.</p>
             </div>
             <TextInput options={name} handleValue={handleName} />
@@ -41,13 +47,19 @@ const ContactaNosotros = () => {
             <EmailField options={email} handleValue={handleEmail} />
             <TextInput options={subject} handleValue={handleSubject} />
             <TextArea options={message} handleValue={handleMessage} />
-            <Checkbox options={personalDataNotice} handleValue={handlePersonalDataNotice} />
-            <Checkbox options={privacyNotice} handleValue={handlePrivacyNotice} />
+            <Checkbox
+              options={personalDataNotice}
+              handleValue={handlePersonalDataNotice}
+            />
+            <Checkbox
+              options={privacyNotice}
+              handleValue={handlePrivacyNotice}
+            />
 
             <Button
               className="submit"
               options={{
-                mode: "secundary",
+                mode: "primary",
                 value: "Enviar",
               }}
               onClick={async () => await handleSubmit()}

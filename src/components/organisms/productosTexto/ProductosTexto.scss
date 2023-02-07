@@ -1,36 +1,35 @@
 @import "../../../styles/abstracts/all.scss";
-.our-history {
-  padding-top: 120px !important;
-  padding-bottom: 80px !important;
-  .title {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
 
-    @include media-lg-less {
-      width: 80%;
-    }
-  }
-
+.product-text {
   .grid {
     display: grid;
     grid-template-columns: auto;
     grid-gap: 40px;
 
     max-width: 800px;
-    margin: 60px auto 0 auto;
+    margin: 30px auto 0 auto;
 
     @include media-md-less {
       margin-top: 24px;
     }
   }
-  .scritp-text {
-    @include media-md-greater {
-      text-align: center;
+
+  .product-title {
+    display: block;
+    margin: 0 auto 0 auto;
+    max-width: 370px;
+
+    @include media-sm {
+      max-width: 200px;
+    }
+    @include media-md {
+      max-width: 280px;
+    }
+    @include media-md {
+      max-width: 310px;
     }
   }
+  
   p {
     color: #fff;
     font-weight: 300;

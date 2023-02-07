@@ -1,6 +1,6 @@
 import React from "react";
 import "./Encuentranos.scss";
-import PalabraEncuentranos from "img/palabra-encuentranos.svg"
+import PalabraEncuentranos from "img/palabras/encuentranos.svg"
 
 const Encuentranos = () => {
   return (

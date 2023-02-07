@@ -1,16 +1,13 @@
 import React from "react";
 import "./Menu.scss";
+import MenuTitle from "img/palabras/menu.svg";
 import MenuImg from "img/menu.jpg";
 import PideLineaImg from "img/pide-linea.svg";
 import NelaCompuImg from "img/nela-compu.svg";
-import PalabraBoulevard from "img/palabra-boulevard.svg"
-import PalabraMercadoTlaque from "img/palabra-mercado-tlaque.svg"
+import PalabraBoulevard from "img/palabras/boulevard.svg"
+import PalabraMercadoTlaque from "img/palabras/mercado-tlaque.svg"
 import pdfMenuBoulevard from "../../../assets/gordelicias-menu-boulevard.pdf";
 import pdfMenuMercado from "../../../assets/gordelicias-menu-mercado.pdf";
-
-
-
-import MenuTitle from "img/menu-title.svg";
 
 const Menu = () => {
   return (

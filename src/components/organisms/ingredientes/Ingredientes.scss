@@ -35,15 +35,19 @@
       background: linear-gradient(180deg, rgba(65, 164, 158, 1), rgba(65, 164, 158, 0));
     }
 
-    .title {
-      font-weight: bold;
-      font-size: 40px;
-      color: rgb(255, 169, 56);
-      text-shadow: -3px 0px 0px #ffffff;
+    svg {
+      display: block;
+      max-width: 450px;
+      width: 80%;  
+      margin-bottom: 30px;
 
-      @include media-lg-less {
-        font-size: 30px;
+      @include media-lg-less{
+        margin-top: 30px;
       }
+      @include media-md-less{
+        margin-top: 10px;
+      }
+      
     }
 
     p {

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nosotros.scss";
+import NosotrosImg from "img/palabras/nosotros.svg";
 import nelaFotos from "img/nela-fotos-gorditas.png";
 
 const Nosotros = () => {
@@ -9,14 +10,20 @@ const Nosotros = () => {
         <div className="grid">
           <div>
             <div>
-              <div className="scritp-text shadow-orange">Nosotros</div>
+              <div>
+                <NosotrosImg className="title" />
+              </div>
               <p>
-                Somos quien te ha quitado el antojo y saciado tu hambre desde
-                1977, somos la tradición, la sazón y el sabor a México, somos
-                quien te ha acompañado durante todos estos años en esas charlas
-                de cafés con amigos en días de lluvia y esos champurrados
-                calientitos en mañanas frías, somos las autenticas gorditas de
-                Tlaquepaque.
+                <font className="gordelicias-font">Gordelicias</font> nació en
+                1977 siendo las primeras y auténticas gorditas estilo norteño en
+                Tlaquepaque, a partir de ahí nos hemos dedicado a elaborar las
+                más deliciosas gorditas rellenas con guisos únicos,
+                tradicionales y de la mejor calidad, para satisfacer ese
+                interminable antojo mexicano por el que lo damos todo:
+              </p>
+              <p>
+                ¡Siempre calientitas, con rapidez y tan ricas para chuparte los
+                dedos!
               </p>
             </div>
           </div>

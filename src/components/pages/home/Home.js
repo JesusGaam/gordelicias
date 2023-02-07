@@ -5,6 +5,7 @@ import ListosGordear from "@/components/organisms/listosGordear/ListosGordear";
 import Nosotros from "@/components/organisms/nosotros/Nosotros";
 import NuestraHistoria from "@/components/organisms/nuestraHistoria/NuestraHistoria";
 import Menu from "@/components/organisms/menu/Menu";
+import ProductosTexto from "@/components/organisms/productosTexto/ProductosTexto";
 import ProductosCarrusel from "@/components/organisms/productosCarrusel/ProductosCarrusel";
 import Ingredientes from "@/components/organisms/ingredientes/Ingredientes";
 import OrdenaAqui from "@/components/organisms/ordenaAqui/OrdenaAqui";
@@ -24,6 +25,7 @@ const Home = () => {
       <ListosGordear />
       <Nosotros />
       <NuestraHistoria />
+      <ProductosTexto />
       <ProductosCarrusel />
       <Menu />
       <Ingredientes />

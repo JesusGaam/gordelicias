@@ -24,7 +24,6 @@ const OrdenaAquiModal = () => {
         </div>
         <div className="link-container">
           <a
-            className="form-element button secundary"
             href="https://order.foodbot.ai/gordelicias"
             target="noopener"
           >
