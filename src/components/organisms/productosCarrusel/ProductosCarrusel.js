@@ -10,9 +10,13 @@ import LeftArrow from "img/left-arrow.svg";
 import RightArrow from "img/right-arrow.svg";
 
 import carousel1 from "img/carruselProductos/carrusel-taza.png";
-import carousel2 from "img/carruselProductos/carousel-1.png";
-import carousel3 from "img/carruselProductos/carousel-2.png";
-import carousel4 from "img/carruselProductos/carousel-3.png";
+/**
+ * Solo comente estas importaciones hasta tener vobo del cambio
+ * posteriormente ya se podrán eliminar
+ */
+// import carousel2 from "img/carruselProductos/carousel-1.png";
+// import carousel3 from "img/carruselProductos/carousel-2.png";
+// import carousel4 from "img/carruselProductos/carousel-3.png";
 import carousel5 from "img/carruselProductos/burro.png";
 
 import carousel6 from "img/carruselProductos/carrusel-burrito.png";
@@ -23,12 +27,11 @@ import carousel10 from "img/carruselProductos/mole-nopales.png";
 import carousel11 from "img/carruselProductos/queso-picadillo.png";
 import carousel12 from "img/carruselProductos/tinga-birria.png";
 
-import carousel13 from "img/carruselProductos/comp1.png";
-import carousel14 from "img/carruselProductos/comp2.png";
-import carousel15 from "img/carruselProductos/comp3.png";
-import carousel16 from "img/carruselProductos/comp4.png";
-import carousel17 from "img/carruselProductos/comp5.png";
-import carousel18 from "img/carruselProductos/comp5.png";
+// import carousel13 from "img/carruselProductos/comp1.png";
+// import carousel14 from "img/carruselProductos/comp2.png";
+// import carousel15 from "img/carruselProductos/comp3.png";
+// import carousel16 from "img/carruselProductos/comp4.png";
+// import carousel17 from "img/carruselProductos/comp5.png";
 
 const ProductosCarrusel = () => {
   return (
@@ -45,7 +48,7 @@ const ProductosCarrusel = () => {
       <div className="carousel-item">
         <img className="principal" src={carousel1} />
       </div>
-      <div className="carousel-item">
+      {/* <div className="carousel-item">
         <img className="principal" src={carousel2} />
       </div>
       <div className="carousel-item">
@@ -53,7 +56,7 @@ const ProductosCarrusel = () => {
       </div>
       <div className="carousel-item">
         <img className="principal" src={carousel4} />
-      </div>
+      </div> */}
       <div className="carousel-item">
         <img className="principal" src={carousel5} />
       </div>
@@ -79,7 +82,7 @@ const ProductosCarrusel = () => {
         <img className="principal" src={carousel12} />
       </div>
 
-      <div className="carousel-item">
+      {/* <div className="carousel-item">
         <img className="principal" src={carousel13} />
       </div>
       <div className="carousel-item">
@@ -93,10 +96,7 @@ const ProductosCarrusel = () => {
       </div>
       <div className="carousel-item">
         <img className="principal" src={carousel17} />
-      </div>
-      <div className="carousel-item">
-        <img className="principal" src={carousel18} />
-      </div>
+      </div> */}
     </AutoplaySlider>
   );
 };

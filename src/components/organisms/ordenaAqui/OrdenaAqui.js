@@ -51,7 +51,7 @@ const OrdenaAqui = () => {
           Ordena en linea y tenlas pronto en tus manos..
         </p>
         <div className="link-container">
-          <a href="https://order.foodbot.ai/gordelicias" target="_blank">
+          <a href={process.env.URL_ONLINE_ORDER} target="_blank">
             ¡ORDENA AQUÍ!
           </a>
         </div>

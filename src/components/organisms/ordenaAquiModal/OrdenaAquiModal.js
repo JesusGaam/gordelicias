@@ -24,7 +24,7 @@ const OrdenaAquiModal = () => {
         </div>
         <div className="link-container">
           <a
-            href="https://order.foodbot.ai/gordelicias"
+            href={process.env.URL_ONLINE_ORDER}
             target="noopener"
           >
             ¡ORDENA AQUÍ!

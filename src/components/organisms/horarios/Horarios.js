@@ -30,7 +30,7 @@ const Horarios = () => {
           </div>
           <div>
             <div className="subtitle mercado">
-              <PalabraMercadoTlaque />{" "}
+              <PalabraMercadoTlaque />
             </div>
             <p>Lunes a Domingo</p>
             <p>8:00 - 14:00 hrs.</p>

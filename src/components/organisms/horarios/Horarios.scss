@@ -34,18 +34,14 @@
   .subtitle {
     margin-bottom: 16px;
     svg {
-      height: 36px;
+      height: 32px;
 
       @include media-sm{
         max-width: 290px;
       }
     }
 
-    &.mercado {
-      svg {
-        height: 44px;
-      }
-    }
+    
   }
   p {
     color: #fff;

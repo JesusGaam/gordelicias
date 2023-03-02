@@ -4,13 +4,13 @@ import PalabraProductos from "img/palabras/productos.svg";
 
 const ProductosTexto = () => {
   return (
-    <section className="container product-text">
+    <section className="container product-text" id="productos">
       <div>
         <PalabraProductos className="product-title" />
         <div className="grid">
           <div>
             <p>
-              En <span className="gordelicias-font">Gordelicias</span>
+              En <span className="gordelicias-font">Gordelicias</span>{" "}
               estamos comprometidos con la calidad de nuestros productos y
               proveedores eligiendo los mejores ingredientes para ofrecer un
               sabor único y delicioso por un precio amigable y accesible.
