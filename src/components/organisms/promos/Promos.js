@@ -6,6 +6,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
+import imagen0 from "img/carruselPromos/tortita-de-camaron.jpg";
 import imagen1 from "img/carruselPromos/carrusel-comadres.jpg";
 import imagen2 from "img/carruselPromos/promo-3x49.jpg";
 import imagen3 from "img/carruselPromos/carrusel-precio-especial.jpg"; // Borrar
@@ -20,6 +21,9 @@ const Promos = () => {
       interval={3000}
       bullets={false}
     >
+      <div className="carousel-item">
+        <img className="background" src={imagen0} />
+      </div>
       <div className="carousel-item">
         <img className="background" src={imagen1} />
       </div>
