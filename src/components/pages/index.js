@@ -18,6 +18,26 @@ module.exports.pages = [
     title: "Gordelicias",
   },
   {
+    filename: "nosotros.html",
+    component: "@/components/pages/aboutUs/AboutUs.js",
+    title: "Nostros | Gordelicias",
+  },
+  {
+    filename: "productos.html",
+    component: "@/components/pages/products/Products.js",
+    title: "Productos | Gordelicias",
+  },
+  {
+    filename: "horario.html",
+    component: "@/components/pages/schedule/Schedule.js",
+    title: "Horario | Gordelicias",
+  },
+  {
+    filename: "nuestra-carta.html",
+    component: "@/components/pages/menu/Menu.js",
+    title: "Conoce nuestra carta | Gordelicias",
+  },
+  {
     filename: "aviso-de-privacidad.html",
     component: "@/components/pages/avisoPrivacidad/AvisoPrivacidad.js",
     title: "Aviso de Privacidad | Gordelicias",

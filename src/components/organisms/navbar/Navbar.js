@@ -18,20 +18,22 @@ const Navbar = () => {
           <div className="grid">
             <div className="link-container">
               <div>
-                <a href="/#nosotros">NOSOTROS</a>
-                <a href="/#productos">PRODUCTOS</a>
+                <a href="/nosotros.html">NOSOTROS</a>
+                <a href="/productos.html">PRODUCTOS</a>
               </div>
               <div className="banderitas-container">
                 <div></div>
               </div>
             </div>
             <div className="logo-container">
-              <Logo />
+              <a href="/" aria-label="Inicio">
+                <Logo />
+              </a>
             </div>
             <div className="link-container">
               <div>
-                <a href="/#carta">CARTA</a>
-                <a href="/#horario">HORARIO</a>
+                <a href="/nuestra-carta.html">CARTA</a>
+                <a href="/horario.html">HORARIO</a>
               </div>
               <div className="banderitas-container right">
                 <div></div>
@@ -50,22 +52,22 @@ const Navbar = () => {
         <div className="background"></div>
         <div className="row">
           <div>
-            <a href="/#nosotros" onClick={clickHamburgerMenu}>
+            <a href="/nosotros.html" onClick={clickHamburgerMenu}>
               NOSOTROS
             </a>
           </div>
           <div>
-            <a href="/#productos" onClick={clickHamburgerMenu}>
+            <a href="/productos.html" onClick={clickHamburgerMenu}>
               PRODUCTOS
             </a>
           </div>
           <div>
-            <a href="/#carta" onClick={clickHamburgerMenu}>
+            <a href="/nuestra-carta.html" onClick={clickHamburgerMenu}>
               CARTA
             </a>
           </div>
           <div>
-            <a href="/#horario" onClick={clickHamburgerMenu}>
+            <a href="/horario.html" onClick={clickHamburgerMenu}>
               HORARIO
             </a>
           </div>
