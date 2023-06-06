@@ -9,15 +9,17 @@ import "./ProductosCarrusel.scss";
 import LeftArrow from "img/left-arrow.svg";
 import RightArrow from "img/right-arrow.svg";
 
-import carousel1 from "img/carruselProductos/carrusel-taza.png";
-import carousel5 from "img/carruselProductos/burro.png";
-import carousel6 from "img/carruselProductos/carrusel-burrito.png";
-import carousel7 from "img/carruselProductos/bistec-chicharron.png";
-import carousel8 from "img/carruselProductos/champinon-chorizo.png";
-import carousel9 from "img/carruselProductos/frijoles-rajas.png";
-import carousel10 from "img/carruselProductos/mole-nopales.png";
-import carousel11 from "img/carruselProductos/queso-picadillo.png";
-import carousel12 from "img/carruselProductos/tinga-birria.png";
+import carousel1 from "img/carruselProductos/birria.png";
+import carousel2 from "img/carruselProductos/bistec.png";
+import carousel3 from "img/carruselProductos/champinon.png";
+import carousel4 from "img/carruselProductos/chicharron.png";
+import carousel5 from "img/carruselProductos/chorizo-papas.png";
+import carousel6 from "img/carruselProductos/frijoles-queso.png";
+import carousel7 from "img/carruselProductos/mole-arroz.png";
+import carousel8 from "img/carruselProductos/nopales.png";
+import carousel9 from "img/carruselProductos/picadillo.png";
+import carousel10 from "img/carruselProductos/rajas-res.png";
+import carousel11 from "img/carruselProductos/tinga.png";
 
 const ProductosCarrusel = () => {
   return (
@@ -34,7 +36,7 @@ const ProductosCarrusel = () => {
       <div className="carousel-item">
         <img className="principal" src={carousel1} />
       </div>
-      {/* <div className="carousel-item">
+      <div className="carousel-item">
         <img className="principal" src={carousel2} />
       </div>
       <div className="carousel-item">
@@ -42,7 +44,7 @@ const ProductosCarrusel = () => {
       </div>
       <div className="carousel-item">
         <img className="principal" src={carousel4} />
-      </div> */}
+      </div>
       <div className="carousel-item">
         <img className="principal" src={carousel5} />
       </div>
@@ -64,25 +66,6 @@ const ProductosCarrusel = () => {
       <div className="carousel-item">
         <img className="principal" src={carousel11} />
       </div>
-      <div className="carousel-item">
-        <img className="principal" src={carousel12} />
-      </div>
-
-      {/* <div className="carousel-item">
-        <img className="principal" src={carousel13} />
-      </div>
-      <div className="carousel-item">
-        <img className="principal" src={carousel14} />
-      </div>
-      <div className="carousel-item">
-        <img className="principal" src={carousel15} />
-      </div>
-      <div className="carousel-item">
-        <img className="principal" src={carousel16} />
-      </div>
-      <div className="carousel-item">
-        <img className="principal" src={carousel17} />
-      </div> */}
     </AutoplaySlider>
   );
 };
