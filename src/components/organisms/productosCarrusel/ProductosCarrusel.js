@@ -10,15 +10,7 @@ import LeftArrow from "img/left-arrow.svg";
 import RightArrow from "img/right-arrow.svg";
 
 import carousel1 from "img/carruselProductos/carrusel-taza.png";
-/**
- * Solo comente estas importaciones hasta tener vobo del cambio
- * posteriormente ya se podrán eliminar
- */
-// import carousel2 from "img/carruselProductos/carousel-1.png";
-// import carousel3 from "img/carruselProductos/carousel-2.png";
-// import carousel4 from "img/carruselProductos/carousel-3.png";
 import carousel5 from "img/carruselProductos/burro.png";
-
 import carousel6 from "img/carruselProductos/carrusel-burrito.png";
 import carousel7 from "img/carruselProductos/bistec-chicharron.png";
 import carousel8 from "img/carruselProductos/champinon-chorizo.png";
@@ -26,12 +18,6 @@ import carousel9 from "img/carruselProductos/frijoles-rajas.png";
 import carousel10 from "img/carruselProductos/mole-nopales.png";
 import carousel11 from "img/carruselProductos/queso-picadillo.png";
 import carousel12 from "img/carruselProductos/tinga-birria.png";
-
-// import carousel13 from "img/carruselProductos/comp1.png";
-// import carousel14 from "img/carruselProductos/comp2.png";
-// import carousel15 from "img/carruselProductos/comp3.png";
-// import carousel16 from "img/carruselProductos/comp4.png";
-// import carousel17 from "img/carruselProductos/comp5.png";
 
 const ProductosCarrusel = () => {
   return (
