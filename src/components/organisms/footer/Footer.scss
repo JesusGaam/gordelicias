@@ -6,8 +6,59 @@
   .logo {
     display: block;
     margin: 0 auto 30px auto;
-    width: 240px;
+    width: 330px;
+
+    @include media-sm {
+      max-width: 230px;
+    }
+
+    @include media-md {
+      max-width: 280px;
+    }
   }
+  .grid-find-us {
+    width: fit-content;
+    margin: 34px auto 30px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+
+    @media screen and (max-width: 550px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-gap: 24px;
+    }
+
+    > div {
+      display: grid;
+      grid-template-columns: fit-content(46px) fit-content(180px);
+      grid-gap: 10px;
+    }
+
+    svg {
+      fill: #fff;
+      width: 46px;
+
+      @media screen and (max-width: 550px) {
+        width: 38px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-family: CutenesMonster;
+      color: #fff;
+      font-size: 22px;
+      padding: 8px 20px;
+      border: solid 2px #fff;
+      border-radius: 16px;
+
+      @media screen and (max-width: 550px) {
+      }
+    }
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 33% 33% 33%;

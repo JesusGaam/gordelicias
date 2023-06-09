@@ -4,12 +4,34 @@ import LogoImg from "img/logo-horizontal.svg";
 import Instagram from "img/instagram.svg";
 import Facebook from "img/facebook.svg";
 import Youtube from "img/youtube.svg";
+import Location from "img/location.svg";
+import Delivery from "img/delivery.svg";
 
 const Footer = () => {
   return (
     <section className="container footer">
       <div>
         <LogoImg className="logo" />
+        <div className="grid-find-us">
+          <div>
+            <div>
+              <Location fill="#fff" width="46" />
+            </div>
+            <div>
+              <a href="/sucursales.html">ENCUENTRÁNOS</a>
+            </div>
+          </div>
+          <div>
+            <div>
+              <Delivery fill="#fff" width="46" />
+            </div>
+            <div>
+              <a href={process.env.URL_ONLINE_ORDER} target="_blank">
+                HAZ TU PEDIDO
+              </a>
+            </div>
+          </div>
+        </div>
         <div className="grid">
           <div>
             <div className="subtitle">Contacto</div>

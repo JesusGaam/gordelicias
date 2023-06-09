@@ -28,9 +28,9 @@ module.exports.pages = [
     title: "Productos | Gordelicias",
   },
   {
-    filename: "horario.html",
+    filename: "sucursales.html",
     component: "@/components/pages/schedule/Schedule.js",
-    title: "Horario | Gordelicias",
+    title: "Sucursales | Gordelicias",
   },
   {
     filename: "nuestra-carta.html",

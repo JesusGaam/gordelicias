@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="link-container">
               <div>
                 <a href="/nuestra-carta.html">CARTA</a>
-                <a href="/horario.html">HORARIO</a>
+                <a href="/sucursales.html">SUCURSALES</a>
               </div>
               <div className="banderitas-container right">
                 <div></div>
@@ -67,8 +67,8 @@ const Navbar = () => {
             </a>
           </div>
           <div>
-            <a href="/horario.html" onClick={clickHamburgerMenu}>
-              HORARIO
+            <a href="/sucursales.html" onClick={clickHamburgerMenu}>
+              SUCURSALES
             </a>
           </div>
         </div>
