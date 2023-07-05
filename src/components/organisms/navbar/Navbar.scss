@@ -33,20 +33,20 @@
     display: grid;
     grid-template-columns: calc(50% - 75px) 150px calc(50% - 75px) 0;
 
-    @include media-md-less {
+    @include media-lg-less {
       grid-template-columns: calc(50% - 75px) 120px calc(50% - 85px) 40px;
     }
 
     .logo-container {
       text-align: center;
-      @include media-md-less {
+      @include media-lg-less {
         text-align: right;
       }
 
       svg {
         width: 150px;
 
-        @include media-md-less{
+        @include media-lg-less{
           width: 120px;
         }
       }
@@ -60,7 +60,7 @@
         margin-top: 10px;
 
         &:nth-child(1) {
-          @include media-md-less {
+          @include media-lg-less {
             display: none;
           }
         }
@@ -82,12 +82,12 @@
       &:not(.right) {
         padding-right: 30px;
         
-        @include media-md-less {
+        @include media-lg-less {
           padding-right: 10px;
         }
       }
 
-      @include media-md-less {
+      @include media-lg-less {
         padding-top: 24px;
       }
 
@@ -103,7 +103,7 @@
       &.right {
         padding-left: 30px;
 
-        @include media-md-less {
+        @include media-lg-less {
           padding-left: 10px;
           padding-right: 10px;
         }

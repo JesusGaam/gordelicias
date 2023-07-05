@@ -23,6 +23,11 @@ module.exports.pages = [
     title: "Nostros | Gordelicias",
   },
   {
+    filename: "club-gordelicias.html",
+    component: "@/components/pages/club/Club.js",
+    title: "Club Gordelicias | Gordelicias",
+  },
+  {
     filename: "productos.html",
     component: "@/components/pages/products/Products.js",
     title: "Productos | Gordelicias",

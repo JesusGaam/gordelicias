@@ -20,6 +20,7 @@ const Navbar = () => {
               <div>
                 <a href="/nosotros.html">NOSOTROS</a>
                 <a href="/productos.html">PRODUCTOS</a>
+                <a href="/nuestra-carta.html">CARTA</a>
               </div>
               <div className="banderitas-container">
                 <div></div>
@@ -32,8 +33,8 @@ const Navbar = () => {
             </div>
             <div className="link-container">
               <div>
-                <a href="/nuestra-carta.html">CARTA</a>
                 <a href="/sucursales.html">SUCURSALES</a>
+                <a href="/club-gordelicias.html">CLUB GORDELICIAS</a>
               </div>
               <div className="banderitas-container right">
                 <div></div>
@@ -69,6 +70,11 @@ const Navbar = () => {
           <div>
             <a href="/sucursales.html" onClick={clickHamburgerMenu}>
               SUCURSALES
+            </a>
+          </div>
+          <div>
+            <a href="/club-gordelicias.html" onClick={clickHamburgerMenu}>
+              CLUB GORDELICIAS
             </a>
           </div>
         </div>
