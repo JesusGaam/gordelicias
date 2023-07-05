@@ -5,11 +5,11 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 64px;
+  height: $headerHeight;
   background-color: #303030;
   z-index: 1000;
 
-  padding: 10px 20px;
+  padding: 0px 10px;
 
   .vertical-center {
     display: -webkit-box;
@@ -31,10 +31,10 @@
   .grid {
     width: 100%;
     display: grid;
-    grid-template-columns: calc(50% - 50px) 100px calc(50% - 50px) 0;
+    grid-template-columns: calc(50% - 75px) 150px calc(50% - 75px) 0;
 
     @include media-md-less {
-      grid-template-columns: calc(50% - 50px) 100px calc(50% - 92px) 40px;
+      grid-template-columns: calc(50% - 75px) 120px calc(50% - 85px) 40px;
     }
 
     .logo-container {
@@ -44,7 +44,11 @@
       }
 
       svg {
-        width: 100px;
+        width: 150px;
+
+        @include media-md-less{
+          width: 120px;
+        }
       }
     }
 
@@ -53,6 +57,8 @@
 
       > div {
         height: 24px;
+        margin-top: 10px;
+
         &:nth-child(1) {
           @include media-md-less {
             display: none;
@@ -75,8 +81,9 @@
 
       &:not(.right) {
         padding-right: 30px;
+        
         @include media-md-less {
-          padding-right: 20px;
+          padding-right: 10px;
         }
       }
 
@@ -97,7 +104,7 @@
         padding-left: 30px;
 
         @include media-md-less {
-          padding-left: 20px;
+          padding-left: 10px;
           padding-right: 10px;
         }
 
@@ -117,7 +124,7 @@
 
 .mobile-menu {
   position: fixed;
-  top: 80px;
+  top: $headerHeight;
   height: 0;
   text-align: left;
   background-color: #303030;
