@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 
@@ -12,21 +12,26 @@ import imagen3 from "img/carruselPromos/carrusel-precio-especial.jpg"; // Borrar
 import imagen4 from "img/carruselPromos/promo-horario-servicio.jpg";
 
 const Promos = () => {
+
+  useEffect(() => {
+    document.querySelector('video').playbackRate = 2.0;
+    document.querySelector('video').play();
+  }, [])
   return (
     <AutoplaySlider
       className={"carousel-header"}
       play={true}
       cancelOnInteraction={true} // should stop playing on user interaction
-      interval={4000}
+      interval={3000}
       bullets={false}
     >
       <div className="carousel-item">
-        <video controls autoplay className="video">
+        <video autoplay muted playsinline loop className="video">
           <source src="https://gordelicias.com.mx/sol-luna.mp4" type="video/mp4" />
           No se puede reproducir video
         </video>
       </div>
-      
+
       <div className="carousel-item">
         <img className="background" src={imagen1} />
       </div>
