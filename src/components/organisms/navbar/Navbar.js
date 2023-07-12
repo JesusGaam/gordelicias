@@ -20,7 +20,6 @@ const Navbar = () => {
               <div>
                 <a href="/nosotros.html">NOSOTROS</a>
                 <a href="/productos.html">PRODUCTOS</a>
-                <a href="/nuestra-carta.html">CARTA</a>
               </div>
               <div className="banderitas-container">
                 <div></div>
@@ -60,11 +59,6 @@ const Navbar = () => {
           <div>
             <a href="/productos.html" onClick={clickHamburgerMenu}>
               PRODUCTOS
-            </a>
-          </div>
-          <div>
-            <a href="/nuestra-carta.html" onClick={clickHamburgerMenu}>
-              CARTA
             </a>
           </div>
           <div>

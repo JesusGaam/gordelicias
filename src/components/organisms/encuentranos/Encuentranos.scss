@@ -1,43 +1,11 @@
 @import "../../../styles/abstracts/all.scss";
 
 .find-us {
-  .title {
-    text-align: center;
-     > svg{
-      height: 70px;
-
-      @include media-sm{
-        max-width: 280px;
-      }
-      @include media-md{
-        max-width: 320px;
-      }
-     }
-    // font-family: RifficFree;
-    // font-size: 50px;
-    // text-align: center;
-    // font-weight: bold;
-    // color: rgb(255,124,122	);
-    // text-transform: uppercase;
-
-    // @include media-lg{
-    //   font-size: 40px;
-    // }
-    // @include media-md{
-    //   font-size: 30px;
-    // }
-    // @include media-sm{
-    //   font-size: 24px;
-    // }
-  }
-
-  .mapouter {
-    iframe {
-      display: block;
-      width: 100%;
-      max-width: 1000px;
-      height: 500px;
-      margin: 40px auto 0 auto;
-    }
+  iframe {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 40px auto 0 auto;
   }
 }

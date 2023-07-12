@@ -38,11 +38,6 @@ module.exports.pages = [
     title: "Sucursales | Gordelicias",
   },
   {
-    filename: "nuestra-carta.html",
-    component: "@/components/pages/menu/Menu.js",
-    title: "Conoce nuestra carta | Gordelicias",
-  },
-  {
     filename: "aviso-de-privacidad.html",
     component: "@/components/pages/avisoPrivacidad/AvisoPrivacidad.js",
     title: "Aviso de Privacidad | Gordelicias",

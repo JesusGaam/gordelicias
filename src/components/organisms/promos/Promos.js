@@ -17,9 +17,16 @@ const Promos = () => {
       className={"carousel-header"}
       play={true}
       cancelOnInteraction={true} // should stop playing on user interaction
-      interval={3000}
+      interval={4000}
       bullets={false}
     >
+      <div className="carousel-item">
+        <video controls autoplay className="video">
+          <source src="https://gordelicias.com.mx/sol-luna.mp4" type="video/mp4" />
+          No se puede reproducir video
+        </video>
+      </div>
+      
       <div className="carousel-item">
         <img className="background" src={imagen1} />
       </div>
