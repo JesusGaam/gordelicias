@@ -10,7 +10,7 @@
 
   .scroll-panel .panel {
     position: relative;
-    height: 140vh;
+    height: 160vh;
 
     @include media-lg-greater {
       // height: 100vh;
@@ -92,7 +92,7 @@
     }
 
     @include media-lg-less {
-      top: 200px;
+      top: 330px;
       left: calc(50% - 27vh);
       height: 88vh;
       width: 64vh;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Ingredientes.scss";
-import ScrollPanel from "../ScrollPanel/ScrollPanel";
+import ScrollPanel from "../scrollPanel/ScrollPanel";
 import IngredientesCalidadImg from "img/palabras/ingredientes-de-calidad.svg";
 import GorditaAbiertaImg from "img/gordita-abierta.png";
 
@@ -42,10 +42,10 @@ const Ingredientes = () => {
         <div className="text-container">
           <IngredientesCalidadImg />
           <p>
-            Siempre buscamos que nuestros guisos a parte de ricos sean
-            nutritivos, por eso seleccionamos cuidadosamente casa uno de
-            nuestros ingredientes para darte una mejor calidad de alimentos y
-            con esto un mejor servicio.
+            En <span className="gordelicias-font">Gordelicias</span> estamos comprometidos con la calidad de nuestros productos y proveedores eligiendo los mejores ingredientes para ofrecer un sabor único y delicioso por un precio amigable y accesible.
+          </p>
+          <p>
+            Hemos implementado acciones para que nuestros estándares de calidad estén en constante mejora, innovando en el ramo de restaurantes de comida rápida mexicana.
           </p>
         </div>
         <img className="gordita" src={GorditaAbiertaImg} style={gorditaStyle} />
