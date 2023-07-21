@@ -8,7 +8,7 @@ const OrdenaAquiModal = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {setShowModal(true)}, 1500);
+    setTimeout(() => {setShowModal(true)}, 5000);
   }, []);
 
   return (
