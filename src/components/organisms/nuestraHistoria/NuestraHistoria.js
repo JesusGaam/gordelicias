@@ -1,7 +1,6 @@
 import React from "react";
 import "./NuestraHistoria.scss";
 import NuestraHistoriaImg from "img/palabras/nuestra-historia-blank.svg";
-import orageBannerImg from "img/orange-banner.png";
 
 const NuestraHistoria = () => {
   return (
