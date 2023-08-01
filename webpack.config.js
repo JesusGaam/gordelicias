@@ -47,6 +47,7 @@ module.exports = (env) => ({
     extensions: [".js", ".jsx"],
     alias: {
       "@": path.resolve(__dirname, "src"),
+      organisms: path.resolve(__dirname, "src/components/organisms"),
       img: path.resolve(__dirname, "src/assets/img"),
     },
   },
@@ -111,9 +112,9 @@ module.exports = (env) => ({
     minimize: true,
     minimizer: [new TerserPlugin({
       terserOptions: {
-          format: {
-              comments: false,
-          },
+        format: {
+          comments: false,
+        },
       },
       extractComments: false,
     })],

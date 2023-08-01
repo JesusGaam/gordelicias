@@ -1,13 +1,14 @@
 import React from "react";
-import Navbar from "@/components/organisms/navbar/Navbar";
-import Promos from "@/components/organisms/promos/Promos";
-import ListosGordear from "@/components/organisms/listosGordear/ListosGordear";
-import Ingredientes from "@/components/organisms/ingredientes/Ingredientes";
-import OrdenaAqui from "@/components/organisms/ordenaAqui/OrdenaAqui";
-import Horarios from "@/components/organisms/horarios/Horarios";
-import Footer from "@/components/organisms/footer/Footer";
-import Contacta from "@/components/organisms/contactaNosotros/ContactaNosotros";
-import OrdenaAquiModal from "@/components/organisms/ordenaAquiModal/OrdenaAquiModal";
+import Navbar from "organisms/navbar/Navbar";
+import Promos from "organisms/promos/Promos";
+import ListosGordear from "organisms/listosGordear/ListosGordear";
+import Ingredientes from "organisms/ingredientes/Ingredientes";
+import OrdenaAqui from "organisms/ordenaAqui/OrdenaAqui";
+import Horarios from "organisms/horarios/Horarios";
+import Contacta from "organisms/contactaNosotros/ContactaNosotros";
+import InstagramGrid from "organisms/instagramGrid/InstagramGrid";
+import Footer from "organisms/footer/Footer";
+import OrdenaAquiModal from "organisms/ordenaAquiModal/OrdenaAquiModal";
 
 import "./Home.css";
 
@@ -21,6 +22,7 @@ const Home = () => {
       <OrdenaAqui />
       <Horarios />
       <Contacta />
+      <InstagramGrid />
       <Footer />
       <OrdenaAquiModal />
     </>

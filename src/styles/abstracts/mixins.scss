@@ -125,14 +125,14 @@
   }
 }
 @mixin media-sm-greater {
-  @media screen and (min-width: $breakPointSM + 1px){
+  @media screen and (min-width: ($breakPointSM + 1px)){
     @content;
   }
 }
 
 
 @mixin media-md {
-  @media screen and (min-width: $breakPointSM + 1px) and (max-width: $breakPointMD){
+  @media screen and (min-width: ($breakPointSM + 1px)) and (max-width: $breakPointMD){
     @content;
   }
 }
@@ -142,14 +142,14 @@
   }
 }
 @mixin media-md-greater {
-  @media screen and (min-width: $breakPointMD + 1px){
+  @media screen and (min-width: ($breakPointMD + 1px)){
     @content;
   }
 }
 
 
 @mixin media-lg {
-  @media screen and (min-width: $breakPointMD + 1px) and (max-width: $breakPointLG){
+  @media screen and (min-width: ($breakPointMD + 1px)) and (max-width: $breakPointLG){
     @content;
   }
 }
@@ -159,14 +159,14 @@
   }
 }
 @mixin media-lg-greater {
-  @media screen and (min-width: $breakPointLG + 1px){
+  @media screen and (min-width: ($breakPointLG + 1px)){
     @content;
   }
 }
 
 
 @mixin media-xl {
-  @media screen and (min-width: $breakPointLG + 1px) and (max-width: $breakPointXL){
+  @media screen and (min-width: ($breakPointLG + 1px)) and (max-width: $breakPointXL){
     @content;
   }
 }
@@ -176,7 +176,7 @@
   }
 }
 @mixin media-xl-greater {
-  @media screen and (min-width: $breakPointXL + 1px){
+  @media screen and (min-width: ($breakPointXL + 1px)){
     @content;
   }
 }

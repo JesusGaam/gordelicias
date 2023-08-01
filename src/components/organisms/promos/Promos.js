@@ -25,7 +25,7 @@ const Promos = () => {
       bullets={false}
     >
       <div className="carousel-item">
-        <video autoplay muted playsinline loop className="video">
+        <video autoPlay muted playsInline loop className="video">
           <source src="https://gordelicias.com.mx/sol-luna.mp4" type="video/mp4" />
           No se puede reproducir video
         </video>
