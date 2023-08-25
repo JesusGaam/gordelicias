@@ -8,7 +8,8 @@ import "./Promos.scss";
 
 import imagen1 from "img/carruselPromos/promo-3x49.jpg";
 import imagen2 from "img/carruselPromos/promo-3x49-gorditas.jpg";
-import imagen3 from "img/carruselPromos/carrusel-precio-especial.jpg"; // Borrar
+import imagen3 from "img/carruselPromos/carrusel-precio-especial.jpg";
+import solLunaVideo from "video/sol-luna.mp4"
 
 const Promos = () => {
 
@@ -26,7 +27,7 @@ const Promos = () => {
     >
       <div className="carousel-item">
         <video autoPlay muted playsInline loop className="video">
-          <source src="https://gordelicias.com.mx/sol-luna.mp4" type="video/mp4" />
+          <source src={solLunaVideo} type="video/mp4" />
           No se puede reproducir video
         </video>
       </div>

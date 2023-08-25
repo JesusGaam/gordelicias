@@ -49,6 +49,7 @@ module.exports = (env) => ({
       "@": path.resolve(__dirname, "src"),
       organisms: path.resolve(__dirname, "src/components/organisms"),
       img: path.resolve(__dirname, "src/assets/img"),
+      video: path.resolve(__dirname, "src/assets/video"),
     },
   },
   module: {
@@ -104,6 +105,13 @@ module.exports = (env) => ({
         test: /\.(ttf|eot|otf|woff|woff2)$/i,
         options: {
           outputPath: "assets/fonts",
+        },
+      },
+      {
+        loader: "file-loader",
+        test: /\.(mp4)$/i,
+        options: {
+          outputPath: "assets/video",
         },
       },
     ],
