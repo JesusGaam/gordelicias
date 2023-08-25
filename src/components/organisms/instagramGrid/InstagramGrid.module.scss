@@ -8,16 +8,19 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));
   grid-auto-rows: 1fr;
   grid-gap: 1rem;
 
-  @include media-md {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  @include media-sm {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  @include media-sm {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  @include media-sm-greater {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  @include media-lg-greater {
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 

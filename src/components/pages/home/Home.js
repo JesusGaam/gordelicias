@@ -20,11 +20,11 @@ const Home = () => {
       <ListosGordear />
       <Ingredientes />
       <OrdenaAqui />
+      <InstagramGrid />
       <Horarios />
       <Contacta />
-      <InstagramGrid />
       <Footer />
-      <OrdenaAquiModal />
+      {/* <OrdenaAquiModal /> */}
     </>
   );
 };
