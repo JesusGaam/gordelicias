@@ -1,0 +1,133 @@
+@import "../../../styles/abstracts/all.scss";
+
+.products {
+  padding-bottom: 0px !important;
+  overflow: hidden;
+
+  .products-title {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+
+    @include media-md-less {
+      width: 70%;
+    }
+  }
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+  padding-top: 60px !important;
+
+  @include media-md-less {
+    padding-bottom: 260px !important;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    @include media-lg-greater {
+      position: relative;
+    }
+
+    @include media-md-greater {
+      min-height: 350px;
+    }
+  }
+
+  .scritp-text {
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #fff;
+    font-weight: 300;
+    max-width: 440px;
+
+    @include media-md-greater {
+      font-size: 24px;
+    }
+
+    @include media-md {
+      font-size: 22px;
+    }
+  }
+
+  .images {
+    z-index: -1;
+
+    img {
+      position: absolute;
+
+      &.circle {
+        right: -30px;
+
+        @include media-lg-greater {
+          height: 350px;
+          top: calc(50% - 175px);
+        }
+        @include media-lg {
+          height: 300px;
+          top: calc(50% - 150px);
+        }
+
+        @include media-md-less {
+          height: 260px;
+          top: calc(50% - 130px);
+        }
+
+        @include media-sm {
+          height: 200px;
+          top: calc(50% - 100px);
+        }
+      }
+
+      @include media-md-less {
+        top: initial !important;
+        bottom: 0;
+      }
+    }
+  }
+
+  &.right {
+    > div {
+      justify-content: right;
+    }
+
+    .product-subtitle {
+      text-align: right;
+    }
+
+    p {
+      text-align: right;
+    }
+    .images {
+      img {
+        right: initial;
+        left: -30px;
+
+        @include media-lg-greater {
+          height: 414px;
+          top: calc(50% - 210px);
+        }
+        @include media-lg {
+          height: 380px;
+          top: calc(50% - 190px);
+        }
+
+        @include media-md-less {
+          height: 320px;
+          top: calc(50% - 160px);
+        }
+
+        @include media-sm {
+          height: 240px;
+          top: calc(50% - 120px);
+        }
+      }
+    }
+  }
+}

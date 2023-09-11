@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "organisms/*": ["src/components/organisms/*"],
+      "img/*": ["src/assets/img/*"],
+      "video/*": ["src/assets/video/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

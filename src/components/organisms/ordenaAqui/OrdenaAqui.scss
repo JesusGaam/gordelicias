@@ -1,0 +1,45 @@
+@import "../../../styles/abstracts/all.scss";
+
+.order-here {
+  .gordear-text {
+    display: block;
+    margin: 0 auto 10px auto;
+    height: calc(100% - 344px - 10px);
+    max-width: 800px;
+
+    @include media-lg-less {
+      max-width: 90vw;
+    }
+    @include media-md {
+      height: calc(100% - 326px - 10px);
+    }
+    @include media-sm {
+      height: calc(100% - 266px - 10px);
+    }
+  }
+  .moto-nela-container {
+    position: absolute;
+    bottom: 0;
+  }
+  p {
+    font-family: Monteral;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  div.link-container {
+    text-align: center;
+    a {
+      display: inline-block;
+      font-family: CutenesMonster;
+      font-size: 30px;
+      color: #ffffff;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 16px;
+      background-color: var(--color-primary);
+    }
+  }
+}

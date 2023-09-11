@@ -1,0 +1,60 @@
+@import "../../../styles/abstracts/all.scss";
+
+.modal-dialog .modal {
+  background-image: url("img/gray-background.jpg");
+  background-color: #111111;
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+.modal-order-here {
+  @include media-md-greater {
+    min-width: 500px;
+  }
+
+  .gordear-text {
+    display: block;
+    margin: 0 auto;
+
+    @include media-sm {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+
+    @include media-sm-greater {
+      width: 60%;
+    }
+  }
+
+  .nela-container {
+    right: calc(50% - 100px) !important;
+
+    @include media-sm-greater {
+      top: 80px !important;
+    }
+
+    .nela-motos {
+      width: 200px !important;
+    }
+
+    .shadow {
+      width: 180px;
+    }
+  }
+
+  div.link-container {
+    margin-top: 30px;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      font-family: CutenesMonster;
+      font-size: 30px;
+      color: #ffffff;
+      padding: 10px 20px;
+      margin-top: 30px;
+      border-radius: 16px;
+      background-color: var(--color-primary);
+    }
+  }
+}

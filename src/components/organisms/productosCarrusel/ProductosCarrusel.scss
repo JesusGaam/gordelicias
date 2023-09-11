@@ -1,0 +1,41 @@
+@import "../../../styles/abstracts/all.scss";
+
+.product-carousel {
+  position: relative;
+  width: 100%;
+  max-width: $breakPointXL;
+  height: 500px;
+  margin: 0 auto;
+  .awssld__content{
+    background-color: transparent !important;
+  }
+
+  @include media-md-less {
+    height: 400px;
+  }
+  @include media-lg-greater {
+    height: 800px;
+  }
+
+  .carousel-item {
+    text-align: center;
+    
+    img.principal {
+      z-index: 1;
+      height: auto;
+
+      @include media-md-less {
+        width: 90%;
+      }
+
+      @include media-sm-greater {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      @include media-lg-greater {
+        max-width: 800px;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../../styles/abstracts/all.scss";
+.about-us {
+  .title {
+    display: block;
+    margin-bottom: 30px;
+    max-width: 260px;
+
+    @include media-md-less {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    @include media-md-less {
+      grid-template-columns: auto;
+    }
+
+    > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+    }
+
+    > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .scritp-text {
+    margin-bottom: 40px;
+
+    @include media-md-less {
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-weight: 300;
+
+    @include media-md-greater {
+      font-size: 24px;
+    }
+
+    @include media-md {
+      font-size: 22px;
+    }
+  }
+
+  .nela-pics {
+    width: 80%;
+    @include media-md-less {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../styles/abstracts/all.scss";
+.scroll-panel {
+  overflow: initial;
+
+  .panel {
+    position: relative;
+    z-index: $zIndexSticky;
+  }
+}

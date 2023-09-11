@@ -1,0 +1,66 @@
+@import "../../../styles/abstracts/all.scss";
+
+.schedules {
+  .title {
+    margin-bottom: 60px;
+    text-align: center;
+
+    svg {
+      height: 70px;
+
+      @include media-sm {
+        max-width: 280px;
+      }
+
+      @include media-md {
+        max-width: 320px;
+      }
+    }
+  }
+
+  .location {
+    text-align: center;
+
+    + .location{
+      margin-top: 100px;
+    }
+
+    .subtitle {
+      margin-bottom: 16px;
+
+      svg {
+        height: 40px;
+
+        @include media-md {
+          max-width: 360px;
+        }
+
+        @include media-sm {
+          max-width: 300px;
+        }
+      }
+    }
+
+    p {
+      color: #fff;
+
+      +p {
+        padding-top: 4px !important;
+      }
+    }
+
+    .link-container {
+      a {
+        display: inline-block;
+        font-family: CutenesMonster;
+        font-size: 30px;
+        color: #ffffff;
+        padding: 10px 20px;
+        margin-top: 30px;
+        border-radius: 16px;
+        background-color: var(--color-primary);
+      }
+    }
+  }
+
+}
