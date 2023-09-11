@@ -6,6 +6,7 @@ import image2 from "img/instagram/burros-agua.jpg"
 import image3 from "img/instagram/gordita-mano.jpg"
 import image4 from "img/instagram/gorditas-plato.jpg"
 import image5 from "img/instagram/sirviendo-gordita.jpg"
+import image6 from "img/instagram/agua-jamaica.jpg"
 
 const InstagramGrid = () => {
   const card = useRef();
@@ -19,7 +20,7 @@ const InstagramGrid = () => {
     const gridWidth = grid?.current.offsetWidth;
 
     setCardWidth(cardWidth);
-    setRowNumber(Math.ceil(5 / parseInt(gridWidth / cardWidth)))
+    setRowNumber(Math.ceil(6 / parseInt(gridWidth / cardWidth)))
   }
 
   useEffect(() => {
@@ -44,6 +45,9 @@ const InstagramGrid = () => {
         </a>
         <a href="https://www.instagram.com/gordeliciasgdloficial/" target="noopener" className={styles.card}>
           <img src={image1} alt="instagram image" />
+        </a>
+        <a href="https://www.instagram.com/gordeliciasgdloficial/" target="noopener" className={styles.card}>
+          <img src={image6} alt="instagram image" />
         </a>
       </div>
     </section>
