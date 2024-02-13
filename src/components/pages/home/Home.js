@@ -24,7 +24,7 @@ const Home = () => {
       <Horarios />
       <Contacta />
       <Footer />
-      {/* <OrdenaAquiModal /> */}
+      <OrdenaAquiModal />
     </>
   );
 };

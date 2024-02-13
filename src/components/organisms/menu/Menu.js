@@ -6,8 +6,8 @@ import PideLineaImg from "img/pide-linea.svg";
 import NelaCompuImg from "img/nela-compu.svg";
 import PalabraBoulevard from "img/palabras/boulevard.svg"
 import PalabraMercadoTlaque from "img/palabras/mercado-tlaque.svg"
-import pdfMenuBoulevard from "../../../assets/gordelicias-menu-boulevard.pdf";
-import pdfMenuMercado from "../../../assets/gordelicias-menu-mercado.pdf";
+import pdfMenuBoulevard from "../../../assets/menu_boulevard.pdf";
+import pdfMenuMercado from "../../../assets/menu_mercado.pdf";
 
 const Menu = () => {
   return (
