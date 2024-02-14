@@ -6,13 +6,11 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
-// import imagen0 from "img/carruselPromos/atole-del-mes.png";
 import imagen0 from "img/carruselPromos/atole-nuez.jpg"
-import imagen01 from "img/carruselPromos/pibil-bebida.jpg"
-import imagen1 from "img/carruselPromos/burrito-todo-dia.png";
-import imagen2 from "img/carruselPromos/cafe-especialidad.png";
-import imagen3 from "img/carruselPromos/promo-3x49.jpg";
-import imagen4 from "img/carruselPromos/promo-3x49-gorditas.jpg";
+import imagen1 from "img/carruselPromos/pibil-bebida.jpg"
+import imagen2 from "img/carruselPromos/burrito-todo-dia.png";
+import imagen3 from "img/carruselPromos/cafe-especialidad.png";
+import imagen4 from "img/carruselPromos/promo-3x49.jpg";
 import solLunaVideo from "video/sol-luna.mp4"
 
 const Promos = () => {
@@ -37,9 +35,6 @@ const Promos = () => {
       </div>
       <div className="carousel-item">
         <img className="background" src={imagen0} />
-      </div>
-      <div className="carousel-item">
-        <img className="background" src={imagen01} />
       </div>
       <div className="carousel-item">
         <img className="background" src={imagen1} />
