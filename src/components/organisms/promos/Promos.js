@@ -6,19 +6,20 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
-// import imagen0 from "img/carruselPromos/atole-nuez.jpg"
-import imagen1 from "img/carruselPromos/pibil-bebida.jpg"
-import imagen2 from "img/carruselPromos/burrito-todo-dia.png";
-import imagen3 from "img/carruselPromos/cafe-especialidad.png";
+import imagen0 from "img/carruselPromos/web_cafe.jpg"
+import imagen1 from "img/carruselPromos/web_miche.jpg";
+import imagen2 from "img/carruselPromos/pibil-bebida.jpg"
+import imagen3 from "img/carruselPromos/burrito-todo-dia.png";
 import imagen4 from "img/carruselPromos/promo-3x49.jpg";
-import solLunaVideo from "video/sol-luna.mp4"
+// import solLunaVideo from "video/sol-luna.mp4"
 
 const Promos = () => {
 
-  useEffect(() => {
-    document.querySelector('video').playbackRate = 2.0;
-    document.querySelector('video').play();
-  }, [])
+  // useEffect(() => {
+  //   document.querySelector('video').playbackRate = 2.0;
+  //   document.querySelector('video').play();
+  // }, [])
+
   return (
     <AutoplaySlider
       className={"carousel-header"}
@@ -27,15 +28,15 @@ const Promos = () => {
       interval={3000}
       bullets={false}
     >
-      <div className="carousel-item">
+      {/* <div className="carousel-item">
         <video autoPlay muted playsInline loop className="video">
           <source src={solLunaVideo} type="video/mp4" />
           No se puede reproducir video
         </video>
-      </div>
-      {/* <div className="carousel-item">
-        <img className="background" src={imagen0} />
       </div> */}
+      <div className="carousel-item">
+        <img className="background" src={imagen0} />
+      </div>
       <div className="carousel-item">
         <img className="background" src={imagen1} />
       </div>
