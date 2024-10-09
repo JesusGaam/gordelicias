@@ -5,6 +5,7 @@ import "./Horarios.scss";
 import PalabraEncuentranos from "img/palabras/encuentranos.svg"
 import PalabraBoulevard from "img/palabras/boulevard-amarillo.svg";
 import PalabraMercadoTlaque from "img/palabras/mercado-tlaque-amarillo.svg";
+import PalabraBersalio from "img/palabras/bersalio-texto.png";
 import Encuentranos from "../encuentranos/Encuentranos";
 
 const Horarios = () => {
@@ -56,6 +57,31 @@ const Horarios = () => {
           <Encuentranos
             className="google-maps"
             googleMapsURL="https://maps.google.com/maps?q=Gordelicias+Mercado+Tlaquepaque&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          />
+        </div>
+        <div className="location">
+          <div className="subtitle mercado">
+            <img style={{ maxWidth: 300, width: "100%" }} src={PalabraBersalio} />
+          </div>
+          <div>
+
+            <p>Lunes a Sábado</p>
+            <p>8:00 - 21:00 hrs.</p>
+            <br />
+            <p>Domingos</p>
+            <p>8:00 - 14:00 hrs.</p>
+          </div>
+          <div className="link-container">
+            <a
+              href="https://www.google.com/maps/place/Gordelicias+Belisario/@20.7049895,-103.3183047,19z/data=!3m1!4b1!4m6!3m5!1s0x8428b1ce9d56f7bb:0x6d6916c69f279586!8m2!3d20.7049882!4d-103.317661!16s%2Fg%2F11h7tzldzg?entry=ttu&g_ep=EgoyMDI0MTAwNS4yIKXMDSoASAFQAw%3D%3D"
+              target="noopener"
+            >
+              Ver ubicación
+            </a>
+          </div>
+          <Encuentranos
+            className="google-maps"
+            googleMapsURL="https://maps.google.com/maps?q=Gordelicias+Belisario&t=&z=15&ie=UTF8&iwloc=&output=embed"
           />
         </div>
       </div>
