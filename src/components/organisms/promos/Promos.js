@@ -6,7 +6,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
-import imagen1 from "img/carruselPromos/trio-patrio.jpg"
+// import imagen1 from "img/carruselPromos/trio-patrio.jpg"
 import imagen2 from "img/carruselPromos/horchata.jpg";
 import imagen3 from "img/carruselPromos/web_cafe.jpg"
 import imagen4 from "img/carruselPromos/web_miche.jpg";
@@ -34,9 +34,6 @@ const Promos = () => {
           No se puede reproducir video
         </video>
       </div> */}
-      <div className="carousel-item">
-        <img className="background" src={imagen1} />
-      </div>
       <div className="carousel-item">
         <img className="background" src={imagen2} />
       </div>
