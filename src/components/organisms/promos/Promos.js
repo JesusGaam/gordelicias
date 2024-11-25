@@ -6,10 +6,10 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 import "react-awesome-slider/dist/styles.css";
 import "./Promos.scss";
 
-// import imagen1 from "img/carruselPromos/trio-patrio.jpg"
-import imagen2 from "img/carruselPromos/horchata.jpg";
-import imagen3 from "img/carruselPromos/web_cafe.jpg"
-import imagen4 from "img/carruselPromos/web_miche.jpg";
+import imagen2 from "img/carruselPromos/cafe-para-el-frio.jpg"
+import imagen3 from "img/carruselPromos/champurrado-guayaba.jpg";
+import imagen1 from "img/carruselPromos/terraza-fiestas.jpg"
+import imagen4 from "img/carruselPromos/horchata.jpg";
 import imagen5 from "img/carruselPromos/burrito-todo-dia.png";
 // import solLunaVideo from "video/sol-luna.mp4"
 
@@ -34,6 +34,9 @@ const Promos = () => {
           No se puede reproducir video
         </video>
       </div> */}
+      <div className="carousel-item">
+        <img className="background" src={imagen1} />
+      </div>
       <div className="carousel-item">
         <img className="background" src={imagen2} />
       </div>
