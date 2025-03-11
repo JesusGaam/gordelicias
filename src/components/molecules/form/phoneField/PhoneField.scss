@@ -1,4 +1,6 @@
-@import "../../../../styles/abstracts/all.scss";
+@use '../../../../styles/abstracts/functions.scss' as *;
+@use '../../../../styles/abstracts/mixins.scss' as *;
+@use '../../../../styles/abstracts/tokens.scss' as *;
 
 .form-element.phone {
   &.disabled {

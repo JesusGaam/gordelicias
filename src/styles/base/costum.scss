@@ -1,3 +1,6 @@
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+@use '../abstracts/tokens.scss' as *;
 
 body {
   background-image: url("img/gray-background.jpg");

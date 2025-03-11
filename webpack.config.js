@@ -42,6 +42,7 @@ module.exports = (env) => ({
     historyApiFallback: true,
   },
   entry: pagesCore.getJSONEntry(),
+  stats: {warnings:false},
   devtool: false,
   resolve: {
     extensions: [".js", ".jsx"],
@@ -113,7 +114,7 @@ module.exports = (env) => ({
         options: {
           outputPath: "assets/video",
         },
-      },
+      }
     ],
   },
   optimization: {

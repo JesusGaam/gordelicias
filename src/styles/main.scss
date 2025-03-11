@@ -1,8 +1,8 @@
-@import 'abstracts/all.scss';
+@use 'abstracts/all.scss' as *;
 
-@import 'base/fonts.scss';
-@import 'base/global.scss';
-@import 'base/costum.scss';
+@use 'base/fonts.scss' as *;
+@use 'base/global.scss' as *;
+@use 'base/costum.scss' as *;
 
-@import 'layouts/grids.scss';
-@import 'layouts/layers.scss';
+@use 'layouts/grids.scss' as *;
+@use 'layouts/layers.scss' as *;
